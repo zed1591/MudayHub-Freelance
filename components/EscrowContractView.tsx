@@ -228,7 +228,7 @@ export function EscrowContractView({ contract: initial, role, userId }: Props) {
         <div className="rounded-2xl border border-slate-200/90 bg-white p-4 shadow-sm hover:border-slate-300 transition">
           <div className="flex items-center justify-between text-slate-500 text-xs">
             <span className="font-mono uppercase tracking-wider text-[11px] font-semibold">Net Payout Rail</span>
-            <Activity className="h-4 w-4 text-[#C8102E]" />
+            <Activity className="h-4 w-4 text-emerald-600" />
           </div>
           <p className="mt-2 text-xl font-extrabold font-mono text-brand">
             {formatEtb(contract.freelancer_net_etb)}
@@ -585,8 +585,8 @@ export function EscrowContractView({ contract: initial, role, userId }: Props) {
             )}
 
           <p className="flex items-start gap-2.5 text-xs text-slate-500">
-            <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-[#C8102E]" />
-            Secured by C²SA INTEL Escrow Protocol with automated HMAC webhook verification and anti-disintermediation filters.
+            <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+            Secured by MudayHub Escrow Protocol with automated HMAC webhook verification and anti-disintermediation filters.
           </p>
         </div>
       </div>

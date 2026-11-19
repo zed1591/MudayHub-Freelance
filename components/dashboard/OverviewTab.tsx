@@ -70,9 +70,9 @@ export function OverviewTab({
           <>
             <Link
               href="/admin/disputes"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex items-center gap-3 group bg-white"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-50 text-brand group-hover:bg-brand group-hover:text-white transition shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition shrink-0">
                 <ShieldCheck className="h-4 w-4" />
               </div>
               <div className="min-w-0">
@@ -82,9 +82,9 @@ export function OverviewTab({
             </Link>
             <Link
               href="/contracts"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex items-center gap-3 group bg-white"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition shrink-0">
                 <FileCheck2 className="h-4 w-4" />
               </div>
               <div className="min-w-0">
@@ -94,9 +94,9 @@ export function OverviewTab({
             </Link>
             <Link
               href="/jobs/new"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex items-center gap-3 group bg-white"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-amber-700 group-hover:bg-brand group-hover:text-white transition shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition shrink-0">
                 <Plus className="h-4 w-4" />
               </div>
               <div className="min-w-0">
@@ -106,9 +106,9 @@ export function OverviewTab({
             </Link>
             <Link
               href="/talent"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex items-center gap-3 group bg-white"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-50 text-purple-700 group-hover:bg-purple-600 group-hover:text-white transition shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition shrink-0">
                 <Users className="h-4 w-4" />
               </div>
               <div className="min-w-0">
@@ -121,9 +121,9 @@ export function OverviewTab({
           <>
             <Link
               href="/jobs/new"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex items-center gap-3 group bg-white"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-50 text-brand group-hover:bg-brand group-hover:text-white transition shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition shrink-0">
                 <Plus className="h-4 w-4" />
               </div>
               <div className="min-w-0">
@@ -133,9 +133,9 @@ export function OverviewTab({
             </Link>
             <Link
               href="/talent"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex items-center gap-3 group bg-white"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition shrink-0">
                 <Users className="h-4 w-4" />
               </div>
               <div className="min-w-0">
@@ -145,9 +145,9 @@ export function OverviewTab({
             </Link>
             <Link
               href="/gigs"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex items-center gap-3 group bg-white"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-amber-700 group-hover:bg-brand group-hover:text-white transition shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition shrink-0">
                 <Sparkles className="h-4 w-4" />
               </div>
               <div className="min-w-0">
@@ -157,9 +157,9 @@ export function OverviewTab({
             </Link>
             <Link
               href="/verify"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex items-center gap-3 group bg-white"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-50 text-purple-700 group-hover:bg-purple-600 group-hover:text-white transition shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition shrink-0">
                 <ShieldCheck className="h-4 w-4" />
               </div>
               <div className="min-w-0">
@@ -172,9 +172,9 @@ export function OverviewTab({
           <>
             <Link
               href="/gigs/new"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex items-center gap-3 group bg-white"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-50 text-brand group-hover:bg-brand group-hover:text-white transition shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition shrink-0">
                 <Plus className="h-4 w-4" />
               </div>
               <div className="min-w-0">
@@ -184,9 +184,9 @@ export function OverviewTab({
             </Link>
             <Link
               href="/jobs"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex items-center gap-3 group bg-white"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition shrink-0">
                 <Briefcase className="h-4 w-4" />
               </div>
               <div className="min-w-0">
@@ -196,9 +196,9 @@ export function OverviewTab({
             </Link>
             <Link
               href="/escrow"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex items-center gap-3 group bg-white"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-amber-700 group-hover:bg-brand group-hover:text-white transition shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition shrink-0">
                 <Wallet className="h-4 w-4" />
               </div>
               <div className="min-w-0">
@@ -208,9 +208,9 @@ export function OverviewTab({
             </Link>
             <Link
               href="/verify"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex items-center gap-3 group bg-white"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-50 text-purple-700 group-hover:bg-purple-600 group-hover:text-white transition shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition shrink-0">
                 <ShieldCheck className="h-4 w-4" />
               </div>
               <div className="min-w-0">
@@ -226,12 +226,11 @@ export function OverviewTab({
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5">
         {/* Card 1: Settlement Volume */}
         <div className="card-surface relative overflow-hidden rounded-2xl p-4 sm:p-5 border border-slate-200/90 bg-white shadow-sm flex flex-col justify-between">
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand to-terracotta" />
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
               {isClient ? "Escrow Capital Funded" : "Net Earnings Disbursed"}
             </span>
-            <span className="rounded-full bg-amber-50 px-2 py-0.5 text-[9px] font-bold text-brand border border-brand/20">
+            <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[9px] font-bold text-slate-700">
               {earnedOrSpentEtb > 0 ? "Active Capital" : "Vault Protected"}
             </span>
           </div>
@@ -241,7 +240,7 @@ export function OverviewTab({
             </p>
           </div>
           <p className="text-[11px] font-medium text-slate-500 flex items-center gap-1">
-            <TrendingUp className="h-3 w-3 text-emerald-600" />
+            <TrendingUp className="h-3 w-3 text-slate-500" />
             <span>Telebirr &amp; CBE settlement rail</span>
           </p>
         </div>
@@ -250,9 +249,8 @@ export function OverviewTab({
         <button
           type="button"
           onClick={() => onOpenEngagements ? onOpenEngagements("contracts") : onOpenContracts()}
-          className="card-surface relative overflow-hidden rounded-2xl p-4 sm:p-5 border border-slate-200/90 hover:border-emerald-500/60 transition shadow-sm flex flex-col justify-between text-left group bg-white cursor-pointer"
+          className="card-surface relative overflow-hidden rounded-2xl p-4 sm:p-5 border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex flex-col justify-between text-left group bg-white cursor-pointer"
         >
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-teal-500" />
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
               Active Escrow Rooms
@@ -263,13 +261,13 @@ export function OverviewTab({
             </span>
           </div>
           <div className="my-2.5">
-            <p className="text-2xl sm:text-3xl font-black text-emerald-700 font-mono tracking-tight group-hover:scale-105 transition-transform origin-left">
+            <p className="text-2xl sm:text-3xl font-black text-slate-900 font-mono tracking-tight group-hover:text-brand transition-colors">
               {activeContracts.length}
             </p>
           </div>
           <div className="flex items-center justify-between text-[11px] text-slate-500">
             <span className="font-mono font-bold text-slate-700">{formatEtb(totalEscrowVolume)}</span>
-            <span className="text-emerald-700 font-bold group-hover:underline flex items-center gap-0.5">
+            <span className="text-slate-700 font-bold group-hover:text-brand flex items-center gap-0.5">
               <span>View</span>
               <ArrowRight className="h-2.5 w-2.5" />
             </span>
@@ -280,9 +278,8 @@ export function OverviewTab({
         <button
           type="button"
           onClick={() => onOpenEngagements ? onOpenEngagements("postings") : undefined}
-          className="card-surface relative overflow-hidden rounded-2xl p-4 sm:p-5 border border-slate-200/90 hover:border-slate-800/40 transition shadow-sm flex flex-col justify-between text-left group bg-white cursor-pointer"
+          className="card-surface relative overflow-hidden rounded-2xl p-4 sm:p-5 border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex flex-col justify-between text-left group bg-white cursor-pointer"
         >
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-slate-700 to-slate-900" />
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
               {isClient ? "My Active RFPs" : "Published Services"}
@@ -292,13 +289,13 @@ export function OverviewTab({
             </span>
           </div>
           <div className="my-2.5">
-            <p className="text-2xl sm:text-3xl font-black text-slate-900 font-mono tracking-tight group-hover:scale-105 transition-transform origin-left">
+            <p className="text-2xl sm:text-3xl font-black text-slate-900 font-mono tracking-tight group-hover:text-brand transition-colors">
               {postingsCount}
             </p>
           </div>
           <div className="flex items-center justify-between text-[11px] text-slate-500">
             <span>{isClient ? "Client Briefs" : "Live Catalog"}</span>
-            <span className="text-slate-900 font-bold group-hover:underline flex items-center gap-0.5">
+            <span className="text-slate-700 font-bold group-hover:text-brand flex items-center gap-0.5">
               <span>Manage</span>
               <ArrowRight className="h-2.5 w-2.5" />
             </span>
@@ -309,25 +306,24 @@ export function OverviewTab({
         <button
           type="button"
           onClick={() => onOpenEngagements ? onOpenEngagements("proposals") : undefined}
-          className="card-surface relative overflow-hidden rounded-2xl p-4 sm:p-5 border border-slate-200/90 hover:border-amber-500/60 transition shadow-sm flex flex-col justify-between text-left group bg-white cursor-pointer"
+          className="card-surface relative overflow-hidden rounded-2xl p-4 sm:p-5 border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex flex-col justify-between text-left group bg-white cursor-pointer"
         >
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 to-orange-500" />
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
               {isClient ? "Candidate Proposals" : "Submitted Bids"}
             </span>
-            <span className="rounded-full bg-amber-50 px-2 py-0.5 text-[9px] font-bold text-amber-800 border border-amber-200">
+            <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[9px] font-bold text-slate-700">
               Pipeline
             </span>
           </div>
           <div className="my-2.5">
-            <p className="text-2xl sm:text-3xl font-black text-slate-900 font-mono tracking-tight group-hover:scale-105 transition-transform origin-left">
+            <p className="text-2xl sm:text-3xl font-black text-slate-900 font-mono tracking-tight group-hover:text-brand transition-colors">
               {proposals.length}
             </p>
           </div>
           <div className="flex items-center justify-between text-[11px] text-slate-500">
             <span>Awaiting Review</span>
-            <span className="text-amber-800 font-bold group-hover:underline flex items-center gap-0.5">
+            <span className="text-slate-700 font-bold group-hover:text-brand flex items-center gap-0.5">
               <span>Review</span>
               <ArrowRight className="h-2.5 w-2.5" />
             </span>
@@ -339,12 +335,12 @@ export function OverviewTab({
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <h2 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-            <FileCheck2 className="h-4 w-4 text-[#C8102E]" />
+            <FileCheck2 className="h-4 w-4 text-brand" />
             <span>Active Escrow Rooms</span>
           </h2>
           <button
             onClick={() => onOpenEngagements ? onOpenEngagements("contracts") : onOpenContracts()}
-            className="text-xs text-[#C8102E] hover:underline font-bold"
+            className="text-xs text-brand hover:underline font-bold"
           >
             All Contracts ({contracts.length}) →
           </button>
@@ -363,7 +359,7 @@ export function OverviewTab({
               return (
                 <div
                   key={c.id}
-                  className="card-surface rounded-2xl p-4 border border-slate-200/90 hover:border-[#C8102E]/40 transition shadow-sm flex flex-col justify-between space-y-3 bg-white"
+                  className="card-surface rounded-2xl p-4 border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex flex-col justify-between space-y-3 bg-white"
                 >
                   <div className="space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
@@ -397,10 +393,10 @@ export function OverviewTab({
         <div className="space-y-3 pt-3 border-t border-slate-200">
           <div className="flex items-center justify-between pb-1">
             <h2 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-[#C8102E]" />
+              <Sparkles className="h-4 w-4 text-brand" />
               <span>Curated RFPs For You</span>
             </h2>
-            <Link href="/jobs" className="text-xs text-[#C8102E] hover:underline font-bold">
+            <Link href="/jobs" className="text-xs text-brand hover:underline font-bold">
               Browse All ({recommendedJobs.length}) →
             </Link>
           </div>
@@ -409,7 +405,7 @@ export function OverviewTab({
             {recommendedJobs.slice(0, 4).map((job) => (
               <div
                 key={job.id}
-                className="card-surface rounded-2xl p-4 border border-slate-200/90 hover:border-[#C8102E]/40 transition shadow-sm flex flex-col justify-between space-y-3 bg-white"
+                className="card-surface rounded-2xl p-4 border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex flex-col justify-between space-y-3 bg-white"
               >
                 <div className="space-y-1.5">
                   <div className="flex items-center justify-between gap-2">
@@ -419,7 +415,7 @@ export function OverviewTab({
                     </span>
                   </div>
 
-                  <h3 className="text-xs font-bold text-slate-900 line-clamp-1 hover:text-[#C8102E]">
+                  <h3 className="text-xs font-bold text-slate-900 line-clamp-1 hover:text-brand">
                     <Link href={`/jobs/${job.id}`}>{job.title}</Link>
                   </h3>
 
@@ -440,7 +436,7 @@ export function OverviewTab({
                   <span className="text-[10px] text-emerald-700 font-bold">✓ Open RFP</span>
                   <Link
                     href={`/jobs/${job.id}`}
-                    className="btn-secondary !py-1 !px-3 text-xs font-bold hover:border-[#C8102E] hover:text-[#C8102E]"
+                    className="btn-secondary !py-1 !px-3 text-xs font-bold hover:border-slate-400 hover:text-slate-900"
                   >
                     Submit Bid →
                   </Link>
@@ -453,10 +449,10 @@ export function OverviewTab({
         <div className="space-y-3 pt-3 border-t border-slate-200">
           <div className="flex items-center justify-between pb-1">
             <h2 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-[#C8102E]" />
+              <Sparkles className="h-4 w-4 text-brand" />
               <span>Recommended Specialists &amp; Packages</span>
             </h2>
-            <Link href="/talent" className="text-xs text-[#C8102E] hover:underline font-bold">
+            <Link href="/talent" className="text-xs text-brand hover:underline font-bold">
               Browse Specialists →
             </Link>
           </div>
@@ -465,7 +461,7 @@ export function OverviewTab({
             {recommendedTalent.slice(0, 2).map((t) => (
               <div
                 key={t.profile.id}
-                className="card-surface rounded-2xl p-4 border border-slate-200/90 hover:border-[#C8102E]/40 transition shadow-sm flex flex-col justify-between space-y-3 bg-white"
+                className="card-surface rounded-2xl p-4 border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex flex-col justify-between space-y-3 bg-white"
               >
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
@@ -476,7 +472,7 @@ export function OverviewTab({
                       <div>
                         <p className="text-xs font-bold text-slate-900 flex items-center gap-1">
                           {t.profile.full_name}
-                          {t.profile.is_verified && <BadgeCheck className="h-3.5 w-3.5 text-[#C8102E]" />}
+                          {t.profile.is_verified && <BadgeCheck className="h-3.5 w-3.5 text-emerald-600" />}
                         </p>
                         <p className="text-[10px] text-slate-500 font-medium">
                           ★ {Number(t.profile.rating).toFixed(1)} · {t.completed_contracts} completed
@@ -502,7 +498,7 @@ export function OverviewTab({
                   <span className="text-[10px] text-emerald-700 font-bold">✓ Vetted Talent</span>
                   <Link
                     href={`/profiles/${t.profile.id}`}
-                    className="btn-secondary !py-1 !px-3 text-xs font-bold hover:border-[#C8102E] hover:text-[#C8102E]"
+                    className="btn-secondary !py-1 !px-3 text-xs font-bold hover:border-slate-400 hover:text-slate-900"
                   >
                     View Profile →
                   </Link>
@@ -513,17 +509,17 @@ export function OverviewTab({
             {recommendedGigs.slice(0, 2).map((g) => (
               <div
                 key={g.id}
-                className="card-surface rounded-2xl p-4 border border-slate-200/90 hover:border-[#C8102E]/40 transition shadow-sm flex flex-col justify-between space-y-3 bg-white"
+                className="card-surface rounded-2xl p-4 border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex flex-col justify-between space-y-3 bg-white"
               >
                 <div className="space-y-1.5">
                   <div className="flex items-center justify-between">
                     <span className="badge-c2sa text-[10px]">{g.category}</span>
-                    <span className="font-mono text-xs font-bold text-[#C8102E]">
+                    <span className="font-mono text-xs font-bold text-slate-900">
                       From {formatEtb(g.packages.basic.price_etb)}
                     </span>
                   </div>
 
-                  <h3 className="text-xs font-bold text-slate-900 line-clamp-1 hover:text-[#C8102E]">
+                  <h3 className="text-xs font-bold text-slate-900 line-clamp-1 hover:text-brand">
                     <Link href={`/gigs/${g.id}`}>{g.title}</Link>
                   </h3>
 

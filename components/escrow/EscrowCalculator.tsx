@@ -118,9 +118,9 @@ Secured by C²SA INTEL Cryptographic Escrow Protocol`;
     <div className="card-surface rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-10 shadow-sm">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-6">
         <div>
-          <div className="inline-flex items-center gap-1.5 rounded-full border border-rose-500/25 bg-rose-50 px-3 py-1 text-xs font-bold text-[#C8102E]">
-            <Calculator className="h-3.5 w-3.5" />
-            <span>C²SA INTEL Escrow Simulator</span>
+          <div className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
+            <Calculator className="h-3.5 w-3.5 text-brand" />
+            <span>MudayHub Escrow Simulator</span>
           </div>
           <h3 className="mt-2 text-2xl font-black text-slate-900 tracking-tight">
             Milestone Escrow &amp; Payout Calculator
@@ -171,7 +171,7 @@ Secured by C²SA INTEL Cryptographic Escrow Protocol`;
                   onClick={() => setAmount(p)}
                   className={`rounded-lg border px-2.5 py-1 text-[11px] font-mono font-bold transition ${
                     amount === p
-                      ? "border-[#C8102E] bg-rose-50 text-[#C8102E]"
+                      ? "border-slate-900 bg-slate-900 text-white"
                       : "border-slate-200 bg-slate-50 text-slate-600 hover:border-slate-300"
                   }`}
                 >
@@ -197,7 +197,7 @@ Secured by C²SA INTEL Cryptographic Escrow Protocol`;
               max={5}
               value={milestoneCount}
               onChange={(e) => setMilestoneCount(Number(e.target.value))}
-              className="mt-3 w-full accent-[#C8102E]"
+              className="mt-3 w-full accent-slate-900"
             />
             <div className="mt-1 flex justify-between text-[10px] text-slate-400 font-mono">
               <span>1 (Single-shot)</span>
@@ -216,9 +216,9 @@ Secured by C²SA INTEL Cryptographic Escrow Protocol`;
             </div>
             <div className="flex items-center justify-between text-xs">
               <span className="text-slate-600 flex items-center gap-1">
-                <span>C²SA Trust &amp; Arbitration Fee (7%):</span>
+                <span>Platform Trust &amp; Arbitration Fee (7%):</span>
               </span>
-              <span className="font-mono font-bold text-[#C8102E]">-{formatEtb(platformFee)}</span>
+              <span className="font-mono font-bold text-slate-700">-{formatEtb(platformFee)}</span>
             </div>
             <div className="border-t border-slate-200 pt-2 flex items-center justify-between text-sm">
               <span className="font-bold text-slate-900">Specialist Net Earning:</span>
@@ -232,7 +232,7 @@ Secured by C²SA INTEL Cryptographic Escrow Protocol`;
               <span>Funds are locked before work begins. Neither party can withdraw without mutual confirmation or arbiter ruling.</span>
             </p>
             <p className="flex items-start gap-1.5">
-              <CheckCircle2 className="h-4 w-4 text-[#C8102E] shrink-0 mt-0.5" />
+              <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
               <span>Direct Telebirr and CBE Birr instant settlement upon client milestone approval.</span>
             </p>
           </div>
@@ -253,7 +253,7 @@ Secured by C²SA INTEL Cryptographic Escrow Protocol`;
             {milestonePlan.map((m, idx) => (
               <div
                 key={idx}
-                className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-[#C8102E]/30"
+                className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-slate-300"
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="space-y-1">

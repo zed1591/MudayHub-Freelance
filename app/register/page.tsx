@@ -99,14 +99,6 @@ function RegisterForm() {
 
   return (
     <div className="relative mx-auto flex max-w-2xl flex-col px-4 py-12 sm:px-6 lg:py-16">
-      {/* Background Decorative Ambient Light */}
-      <div
-        className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 h-80 w-80 rounded-full opacity-20 blur-[100px]"
-        style={{
-          background: "radial-gradient(circle, #C8102E 0%, rgba(189,93,56,0.5) 60%, transparent 100%)",
-        }}
-      />
-
       {/* Header Banner */}
       <div className="relative z-10 text-center">
         {/* Logo Emblem */}

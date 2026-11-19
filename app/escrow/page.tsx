@@ -40,15 +40,15 @@ export default function EscrowPage() {
     <main className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 space-y-16">
       {/* Header */}
       <header className="max-w-3xl">
-        <div className="inline-flex items-center gap-2 rounded-full border border-rose-500/30 bg-rose-50 px-3.5 py-1 text-xs font-bold text-[#C8102E]">
-          <ShieldCheck aria-hidden="true" className="h-4 w-4" />
-          <span>C²SA INTEL Non-Custodial Escrow Protocol</span>
+        <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-3.5 py-1 text-xs font-semibold text-slate-800">
+          <ShieldCheck aria-hidden="true" className="h-4 w-4 text-emerald-600" />
+          <span>MudayHub Sovereign Escrow Protocol</span>
         </div>
         <h1 className="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">
-          High-Trust Milestone Escrow <span className="text-[#C8102E]">&middot; የዋስትና አሰራር</span>
+          High-Trust Milestone Escrow <span className="text-brand">&middot; የዋስትና አሰራር</span>
         </h1>
         <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-600">
-          C²SA INTEL eliminates freelance payment risk in Ethiopia. Funds are locked prior to sprint initiation,
+          MudayHub eliminates freelance payment risk in Ethiopia. Funds are locked prior to sprint initiation,
           guaranteeing specialist payout upon delivery while protecting client capital against non-delivery.
         </p>
       </header>
@@ -61,7 +61,7 @@ export default function EscrowPage() {
       {/* State Machine Visualization */}
       <section className="space-y-6">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-[#C8102E]">
+          <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
             Deterministic Lifecycle
           </span>
           <h2 className="mt-1 text-2xl font-black text-slate-900">
@@ -110,7 +110,7 @@ export default function EscrowPage() {
               key={title}
               className="card-surface rounded-2xl border border-slate-200/90 p-6 shadow-sm space-y-3"
             >
-              <span className="inline-flex rounded-xl bg-rose-50 border border-rose-100 p-2.5 text-[#C8102E]">
+              <span className="inline-flex rounded-xl bg-slate-100 border border-slate-200 p-2.5 text-slate-700">
                 <Icon aria-hidden="true" className="h-5 w-5" />
               </span>
               <h3 className="font-bold text-slate-900 text-sm">{title}</h3>

@@ -152,7 +152,7 @@ export default function PublicProfilePage() {
                 )}
                 {level && (
                   <span className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-[11px] font-bold ${level.bgClass} ${level.colorClass} ${level.borderClass}`}>
-                    {level.id === "master" && <Crown className="h-3.5 w-3.5 fill-purple-400 text-purple-600" />}
+                    {level.id === "master" && <Crown className="h-3.5 w-3.5 fill-amber-400 text-amber-600" />}
                     {level.id === "top_rated" && <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-500" />}
                     {level.id === "rising" && <Zap className="h-3.5 w-3.5 text-brand" />}
                     {level.id === "verified" && <Award className="h-3.5 w-3.5 text-emerald-600" />}
@@ -486,7 +486,7 @@ export default function PublicProfilePage() {
             onClick={() => setActiveTab("reviews")}
             className={`flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs font-bold transition ${
               activeTab === "reviews"
-                ? "bg-[#C8102E] text-white shadow-sm"
+                ? "bg-brand text-white shadow-sm"
                 : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
             }`}
           >
@@ -694,7 +694,7 @@ export default function PublicProfilePage() {
             {/* Certifications Section */}
             <div className="space-y-4">
               <h2 className="text-base font-bold text-slate-900 flex items-center gap-2">
-                <Award className="h-5 w-5 text-purple-600" />
+                <Award className="h-5 w-5 text-slate-700" />
                 <span>Certifications &amp; Recognitions</span>
               </h2>
 

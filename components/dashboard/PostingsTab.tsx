@@ -71,7 +71,7 @@ export function PostingsTab({ isClient, myJobs, myGigs }: Props) {
                 </div>
                 <Link
                   href={`/jobs/${job.id}`}
-                  className="btn-secondary !py-2 !px-4 !text-xs font-bold whitespace-nowrap text-center hover:border-c2sa-crimson hover:text-c2sa-crimson transition"
+                  className="btn-secondary !py-2 !px-4 !text-xs font-bold whitespace-nowrap text-center hover:border-slate-400 hover:text-slate-900 transition"
                 >
                   View Applicants
                 </Link>
@@ -88,7 +88,7 @@ export function PostingsTab({ isClient, myJobs, myGigs }: Props) {
           {myGigs.map((g) => (
             <div
               key={g.id}
-              className="glass-card rounded-2xl p-4 space-y-3 hover:border-c2sa-crimson/50 transition border border-slate-200"
+              className="glass-card rounded-2xl p-4 space-y-3 hover:border-slate-300 transition border border-slate-200"
             >
               <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-slate-100 border border-slate-200">
                 <Image
@@ -105,13 +105,13 @@ export function PostingsTab({ isClient, myJobs, myGigs }: Props) {
               <h3 className="line-clamp-2 text-xs font-bold text-slate-900">{g.title}</h3>
               <div className="flex items-center justify-between text-xs pt-2 border-t border-slate-100">
                 <span className="text-slate-600">{g.category}</span>
-                <span className="font-bold text-c2sa-crimson font-mono">
+                <span className="font-bold text-slate-900 font-mono">
                   From {formatEtb(g.packages.basic.price_etb)}
                 </span>
               </div>
               <Link
                 href={`/gigs/${g.id}`}
-                className="btn-secondary w-full !text-xs !py-1.5 text-center block font-bold hover:border-c2sa-crimson hover:text-c2sa-crimson transition"
+                className="btn-secondary w-full !text-xs !py-1.5 text-center block font-bold hover:border-slate-400 hover:text-slate-900 transition"
               >
                 View Live Offering
               </Link>

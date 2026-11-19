@@ -28,9 +28,9 @@ export const FREELANCER_LEVELS_CONFIG = {
     title: "Muday Master",
     amharicTitle: "የሙዳይ ማስተር",
     badgeLabel: "Muday Master",
-    colorClass: "text-purple-800",
-    bgClass: "bg-purple-50",
-    borderClass: "border-purple-300",
+    colorClass: "text-slate-900",
+    bgClass: "bg-slate-100",
+    borderClass: "border-slate-300",
     minCompleted: 10,
     minRating: 4.85,
     perks: [

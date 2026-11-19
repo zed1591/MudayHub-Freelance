@@ -175,7 +175,7 @@ export function EngagementsWorkspace({
               <button
                 type="button"
                 onClick={onToggleFullScreen}
-                className="btn-secondary !py-2 !px-3 text-xs font-bold flex items-center gap-1.5 hover:border-[#C8102E]/40"
+                className="btn-secondary !py-2 !px-3 text-xs font-bold flex items-center gap-1.5 hover:border-slate-300"
                 title={isFullScreen ? "Exit Fullscreen" : "Expand Fullscreen Workspace"}
               >
                 {isFullScreen ? (
@@ -231,7 +231,7 @@ export function EngagementsWorkspace({
               placeholder={`Search ${subTab}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full rounded-xl border border-slate-200 bg-slate-50/50 pl-8 pr-3 py-1.5 text-xs text-slate-900 focus:bg-white focus:border-[#C8102E] focus:outline-none transition"
+              className="w-full rounded-xl border border-slate-200 bg-slate-50/50 pl-8 pr-3 py-1.5 text-xs text-slate-900 focus:bg-white focus:border-slate-900 focus:outline-none transition"
             />
           </div>
 
@@ -243,7 +243,7 @@ export function EngagementsWorkspace({
                   type="button"
                   onClick={() => setStatusFilter("all")}
                   className={`px-2.5 py-1 rounded-lg text-xs font-bold transition ${
-                    statusFilter === "all" ? "bg-[#C8102E] text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                    statusFilter === "all" ? "bg-slate-900 text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                   }`}
                 >
                   All ({contracts.length})
@@ -275,7 +275,7 @@ export function EngagementsWorkspace({
                   type="button"
                   onClick={() => setStatusFilter("all")}
                   className={`px-2.5 py-1 rounded-lg text-xs font-bold transition ${
-                    statusFilter === "all" ? "bg-[#C8102E] text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                    statusFilter === "all" ? "bg-slate-900 text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                   }`}
                 >
                   All ({postingsCount})
@@ -298,7 +298,7 @@ export function EngagementsWorkspace({
                   type="button"
                   onClick={() => setStatusFilter("all")}
                   className={`px-2.5 py-1 rounded-lg text-xs font-bold transition ${
-                    statusFilter === "all" ? "bg-[#C8102E] text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                    statusFilter === "all" ? "bg-slate-900 text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                   }`}
                 >
                   All ({proposals.length})
@@ -345,7 +345,7 @@ export function EngagementsWorkspace({
                 return (
                   <div
                     key={c.id}
-                    className="card-surface rounded-2xl p-5 border border-slate-200/90 hover:border-[#C8102E]/40 transition shadow-sm flex flex-col justify-between space-y-4 bg-white"
+                    className="card-surface rounded-2xl p-5 border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex flex-col justify-between space-y-4 bg-white"
                   >
                     <div className="space-y-2.5">
                       <div className="flex items-center justify-between gap-2">
@@ -409,7 +409,7 @@ export function EngagementsWorkspace({
                 {filteredJobs.map((job) => (
                   <div
                     key={job.id}
-                    className="card-surface rounded-2xl p-5 border border-slate-200/90 hover:border-[#C8102E]/40 transition shadow-sm flex flex-col justify-between space-y-4 bg-white"
+                    className="card-surface rounded-2xl p-5 border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex flex-col justify-between space-y-4 bg-white"
                   >
                     <div className="space-y-2">
                       <div className="flex items-center justify-between gap-2">
@@ -435,7 +435,7 @@ export function EngagementsWorkspace({
 
                     <Link
                       href={`/jobs/${job.id}`}
-                      className="btn-secondary w-full !py-2 !text-xs font-bold text-center block hover:border-[#C8102E] hover:text-[#C8102E]"
+                      className="btn-secondary w-full !py-2 !text-xs font-bold text-center block hover:border-slate-400 hover:text-slate-900"
                     >
                       View Applicants →
                     </Link>
@@ -453,7 +453,7 @@ export function EngagementsWorkspace({
                 {filteredGigs.map((g) => (
                   <div
                     key={g.id}
-                    className="card-surface rounded-2xl p-4 border border-slate-200/90 hover:border-[#C8102E]/40 transition shadow-sm flex flex-col justify-between space-y-3 bg-white"
+                    className="card-surface rounded-2xl p-4 border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex flex-col justify-between space-y-3 bg-white"
                   >
                     <div className="space-y-2.5">
                       <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-slate-100 border border-slate-200">
@@ -470,7 +470,7 @@ export function EngagementsWorkspace({
                       </div>
                       <div className="flex items-center justify-between text-[11px]">
                         <span className="badge-c2sa text-[10px]">{g.category}</span>
-                        <span className="font-mono font-bold text-[#C8102E]">
+                        <span className="font-mono font-bold text-slate-900">
                           From {formatEtb(g.packages.basic.price_etb)}
                         </span>
                       </div>
@@ -481,7 +481,7 @@ export function EngagementsWorkspace({
 
                     <Link
                       href={`/gigs/${g.id}`}
-                      className="btn-secondary w-full !text-xs !py-1.5 text-center block font-bold hover:border-[#C8102E] hover:text-[#C8102E]"
+                      className="btn-secondary w-full !text-xs !py-1.5 text-center block font-bold hover:border-slate-400 hover:text-slate-900"
                     >
                       View Offering →
                     </Link>
@@ -510,7 +510,7 @@ export function EngagementsWorkspace({
                 return (
                   <div
                     key={p.id}
-                    className="card-surface rounded-2xl p-5 border border-slate-200/90 hover:border-[#C8102E]/40 transition shadow-sm flex flex-col justify-between space-y-4 bg-white"
+                    className="card-surface rounded-2xl p-5 border border-slate-200/90 hover:border-slate-300 transition shadow-sm flex flex-col justify-between space-y-4 bg-white"
                   >
                     <div className="space-y-2">
                       <div className="flex items-center justify-between gap-2">
@@ -519,7 +519,7 @@ export function EngagementsWorkspace({
                             isAccepted
                               ? "bg-emerald-100 text-emerald-800 border border-emerald-300"
                               : isRejected
-                              ? "bg-rose-100 text-rose-800 border border-rose-300"
+                              ? "bg-slate-100 text-slate-700 border border-slate-200"
                               : "bg-amber-100 text-amber-800 border border-amber-300"
                           }`}
                         >
@@ -554,7 +554,7 @@ export function EngagementsWorkspace({
 
                     <Link
                       href={`/jobs/${p.job_id}`}
-                      className="btn-secondary w-full !py-2 !text-xs font-bold text-center block hover:border-[#C8102E] hover:text-[#C8102E]"
+                      className="btn-secondary w-full !py-2 !text-xs font-bold text-center block hover:border-slate-400 hover:text-slate-900"
                     >
                       {isClient ? "Review & Hire →" : "View Project RFP →"}
                     </Link>

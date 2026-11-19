@@ -58,18 +58,18 @@ export default function VerifyDeedPage() {
       <div className="mb-6">
         <Link
           href="/"
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-[#C8102E] transition"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 transition"
         >
           <ArrowLeft className="h-4 w-4" />
-          <span>Back to C²SA INTEL Grid</span>
+          <span>Back to Home</span>
         </Link>
       </div>
 
       {loading ? (
         <div className="rounded-3xl border border-slate-200 bg-white p-12 text-center shadow-sm">
-          <div className="mx-auto h-10 w-10 animate-spin rounded-full border-4 border-[#C8102E] border-t-transparent" />
+          <div className="mx-auto h-10 w-10 animate-spin rounded-full border-4 border-slate-900 border-t-transparent" />
           <p className="mt-4 text-sm font-semibold text-slate-700">
-            Verifying cryptographic proof against C²SA INTEL sovereign ledger...
+            Verifying cryptographic proof against sovereign ledger...
           </p>
         </div>
       ) : error ? (
@@ -121,7 +121,7 @@ export default function VerifyDeedPage() {
                     Project Deliverable
                   </span>
                   <h2 className="mt-1 text-lg font-bold text-slate-900">{deed.project_title}</h2>
-                  <span className="inline-block mt-1 text-xs font-semibold text-[#C8102E] bg-rose-50 px-2.5 py-0.5 rounded-md border border-rose-200">
+                  <span className="inline-block mt-1 text-xs font-semibold text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded-md border border-slate-200">
                     {deed.category}
                   </span>
                 </div>

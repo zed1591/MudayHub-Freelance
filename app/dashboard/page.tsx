@@ -209,16 +209,6 @@ export default function DashboardPage() {
           : "w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6"
       }`}
     >
-      {/* Background ambient accents */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-20 top-1/4 -z-10 h-96 w-96 rounded-full bg-rose-500/5 blur-3xl"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-20 top-1/2 -z-10 h-96 w-96 rounded-full bg-emerald-500/5 blur-3xl"
-      />
-
       <DashboardHeader
         profile={profile}
         isClient={isClient}
@@ -245,13 +235,13 @@ export default function DashboardPage() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`group flex items-center gap-2 whitespace-nowrap rounded-xl px-4 py-2.5 text-xs font-bold transition-all shrink-0 cursor-pointer ${
                   isActive
-                    ? "bg-slate-900 text-white shadow-md shadow-slate-950/20"
+                    ? "bg-slate-900 text-white shadow-sm"
                     : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
                 }`}
               >
                 <Icon
                   className={`h-4 w-4 transition ${
-                    isActive ? "text-[#C8102E]" : "text-slate-400 group-hover:text-slate-700"
+                    isActive ? "text-brand" : "text-slate-400 group-hover:text-slate-700"
                   }`}
                 />
                 <span>{tab.label}</span>
@@ -259,7 +249,7 @@ export default function DashboardPage() {
                   <span
                     className={`ml-1 rounded-full px-2 py-0.5 text-[10px] font-mono font-bold ${
                       isActive
-                        ? "bg-[#C8102E] text-white"
+                        ? "bg-brand text-white"
                         : "bg-slate-200 text-slate-700"
                     }`}
                   >
@@ -275,7 +265,7 @@ export default function DashboardPage() {
         <button
           type="button"
           onClick={() => setIsFullScreen((prev) => !prev)}
-          className="btn-secondary !py-2 !px-3 !text-xs font-bold flex items-center gap-1.5 self-end sm:self-auto cursor-pointer hover:border-[#C8102E]/40"
+          className="btn-secondary !py-2 !px-3 !text-xs font-bold flex items-center gap-1.5 self-end sm:self-auto cursor-pointer hover:border-slate-300"
           title={isFullScreen ? "Exit Fullscreen Workspace" : "Maximize Fullscreen Workspace"}
         >
           {isFullScreen ? (

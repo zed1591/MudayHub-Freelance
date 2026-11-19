@@ -54,7 +54,7 @@ export function ProposalsTab({ isClient, proposals }: Props) {
                   </p>
                   <p className="mt-0.5 text-slate-600">
                     Proposed:{" "}
-                    <span className="font-bold text-c2sa-crimson font-mono">
+                    <span className="font-bold text-slate-900 font-mono">
                       {formatEtb(p.bid_amount_etb)}
                     </span>{" "}
                     · Duration: {p.duration_days} days · Status:{" "}
@@ -65,7 +65,7 @@ export function ProposalsTab({ isClient, proposals }: Props) {
                 </div>
                 <Link
                   href={`/jobs/${p.job_id}`}
-                  className="btn-secondary !py-1.5 !px-3.5 !text-xs whitespace-nowrap font-bold hover:border-c2sa-crimson hover:text-c2sa-crimson transition"
+                  className="btn-secondary !py-1.5 !px-3.5 !text-xs whitespace-nowrap font-bold hover:border-slate-400 hover:text-slate-900 transition"
                 >
                   {isClient ? "Review & Hire" : "View Project"}
                 </Link>

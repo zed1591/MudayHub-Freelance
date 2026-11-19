@@ -299,7 +299,7 @@ export default function TalentDirectoryPage() {
                             </span>
                             <span className="text-slate-300">·</span>
                             <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-bold ${level.bgClass} ${level.colorClass} ${level.borderClass}`}>
-                              {level.id === "master" && <Crown className="h-3 w-3 fill-purple-400 text-purple-600" />}
+                              {level.id === "master" && <Crown className="h-3 w-3 fill-amber-400 text-amber-600" />}
                               {level.id === "top_rated" && <Star className="h-3 w-3 fill-amber-400 text-amber-500" />}
                               {level.id === "rising" && <Zap className="h-3 w-3 text-brand" />}
                               {level.id === "verified" && <Award className="h-3 w-3 text-emerald-600" />}

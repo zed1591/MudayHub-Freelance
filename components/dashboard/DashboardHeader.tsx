@@ -44,19 +44,6 @@ export function DashboardHeader({
 
   return (
     <div className="card-surface relative overflow-hidden rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm bg-white">
-      <div
-        className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full opacity-10 blur-3xl"
-        style={{
-          background: "radial-gradient(circle, #DF8A33, #BD5D38, transparent 70%)",
-        }}
-      />
-      <div
-        className="pointer-events-none absolute -left-16 -bottom-16 h-48 w-48 rounded-full opacity-10 blur-2xl"
-        style={{
-          background: "radial-gradient(circle, #10B981, transparent 70%)",
-        }}
-      />
-
       <div className="relative z-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-4">
           <div className="relative h-14 w-14 shrink-0">

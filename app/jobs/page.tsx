@@ -84,15 +84,11 @@ function JobsList() {
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       {/* Header banner */}
       <div className="card-surface relative overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-8 sm:p-12 shadow-sm">
-        <div
-          className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 rounded-full opacity-20 blur-3xl"
-          style={{ background: "radial-gradient(circle, #C8102E, #BD5D38, transparent 70%)" }}
-        />
         <div className="relative z-10 flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-rose-500/25 bg-rose-50 px-3.5 py-1 text-xs font-bold text-[#C8102E]">
-              <Briefcase className="h-3.5 w-3.5" />
-              <span>C²SA INTEL Grid &middot; Project RFPs · የፕሮጀክት ጨረታዎች</span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-3.5 py-1 text-xs font-semibold text-slate-700">
+              <Briefcase className="h-3.5 w-3.5 text-brand" />
+              <span>MudayHub &middot; Project RFPs · የፕሮጀክት ጨረታዎች</span>
             </div>
             <h1 className="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">
               Project Requests &amp; RFPs

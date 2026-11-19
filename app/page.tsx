@@ -160,7 +160,7 @@ export default function HomePage() {
                 <Link
                   key={label}
                   href={`/gigs?cat=${encodeURIComponent(category)}`}
-                  className="font-medium text-slate-600 transition hover:text-[#C8102E]"
+                  className="font-medium text-slate-600 transition hover:text-slate-900"
                 >
                   {label}
                 </Link>
@@ -170,9 +170,9 @@ export default function HomePage() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
                 href="/register"
-                className="btn-c2sa !rounded-xl !px-6 !py-3.5 text-sm font-bold shadow-ochre inline-flex items-center gap-2"
+                className="btn-primary !rounded-xl !px-6 !py-3.5 text-sm font-bold shadow-ochre inline-flex items-center gap-2"
               >
-                <span>Join C²SA Freelance Grid</span>
+                <span>Join MudayHub Network</span>
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Link>
               <Link
@@ -186,7 +186,7 @@ export default function HomePage() {
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs font-semibold text-slate-600">
               <span className="inline-flex items-center gap-1.5">
                 <BadgeCheck className="h-4 w-4 text-emerald-600" />
-                C²SA Vetted Specialists
+                MudayHub Vetted Specialists
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <Lock className="h-4 w-4 text-emerald-600" />
@@ -203,62 +203,62 @@ export default function HomePage() {
           <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl sm:p-8 space-y-6">
             <div className="flex items-start justify-between gap-4 border-b border-slate-100 pb-4">
               <div>
-                <p className="text-xs font-bold uppercase tracking-wider text-[#C8102E]">
-                  Grid Operations
+                <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                  Platform Operations
                 </p>
                 <h2 className="mt-1 text-xl font-black text-slate-900">
                   Select Engagement Mode
                 </h2>
               </div>
-              <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-rose-50 border border-rose-100 text-[#C8102E]">
+              <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-100 border border-slate-200 text-slate-700">
                 <Sparkles aria-hidden="true" className="h-5 w-5" />
               </span>
             </div>
 
             <div className="divide-y divide-slate-100">
               <Link href="/gigs" className="group flex items-center gap-4 py-4">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-orange-50 text-brand group-hover:bg-[#C8102E] group-hover:text-white transition">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition">
                   <Search aria-hidden="true" className="h-5 w-5" />
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className="block font-bold text-slate-900 group-hover:text-[#C8102E] transition text-sm">
+                  <span className="block font-bold text-slate-900 group-hover:text-brand transition text-sm">
                     Ready-to-Order Service Packages
                   </span>
                   <span className="mt-0.5 block text-xs text-slate-500">
                     Pre-packaged 3-tier services with fixed pricing and turnaround.
                   </span>
                 </span>
-                <ArrowRight className="h-4 w-4 text-slate-400 transition group-hover:translate-x-1 group-hover:text-[#C8102E]" />
+                <ArrowRight className="h-4 w-4 text-slate-400 transition group-hover:translate-x-1 group-hover:text-brand" />
               </Link>
 
               <Link href="/jobs" className="group flex items-center gap-4 py-4">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition">
                   <BriefcaseBusiness aria-hidden="true" className="h-5 w-5" />
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className="block font-bold text-slate-900 group-hover:text-emerald-700 transition text-sm">
+                  <span className="block font-bold text-slate-900 group-hover:text-brand transition text-sm">
                     Open Project RFPs &amp; Bids
                   </span>
                   <span className="mt-0.5 block text-xs text-slate-500">
                     Review client specifications and submit tailored milestone pitches.
                   </span>
                 </span>
-                <ArrowRight className="h-4 w-4 text-slate-400 transition group-hover:translate-x-1 group-hover:text-emerald-700" />
+                <ArrowRight className="h-4 w-4 text-slate-400 transition group-hover:translate-x-1 group-hover:text-brand" />
               </Link>
 
               <Link href="/jobs/new" className="group flex items-center gap-4 py-4">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-rose-50 text-[#C8102E] group-hover:bg-[#C8102E] group-hover:text-white transition">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition">
                   <CircleDollarSign aria-hidden="true" className="h-5 w-5" />
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className="block font-bold text-slate-900 group-hover:text-[#C8102E] transition text-sm">
+                  <span className="block font-bold text-slate-900 group-hover:text-brand transition text-sm">
                     Post Custom Engineering RFP
                   </span>
                   <span className="mt-0.5 block text-xs text-slate-500">
                     Define custom requirements and hire vetted Ethiopian talent.
                   </span>
                 </span>
-                <ArrowRight className="h-4 w-4 text-slate-400 transition group-hover:translate-x-1 group-hover:text-[#C8102E]" />
+                <ArrowRight className="h-4 w-4 text-slate-400 transition group-hover:translate-x-1 group-hover:text-brand" />
               </Link>
             </div>
 
@@ -296,7 +296,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end border-b border-slate-200 pb-4">
           <div>
-            <p className="text-xs font-bold uppercase tracking-wider text-[#C8102E]">
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
               Core Capabilities
             </p>
             <h2 className="mt-1 text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
@@ -305,7 +305,7 @@ export default function HomePage() {
           </div>
           <Link
             href="/gigs"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-[#C8102E] hover:text-[#A50D25]"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-brand"
           >
             <span>Explore All Ready Services</span>
             <ArrowRight className="h-4 w-4" />
@@ -317,23 +317,23 @@ export default function HomePage() {
             <Link
               key={name}
               href={href}
-              className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#C8102E]/40 hover:shadow-lg relative overflow-hidden"
+              className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-slate-300 hover:shadow-md relative overflow-hidden"
             >
               <div className="flex items-center justify-between">
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-50 text-[#C8102E] transition group-hover:bg-[#C8102E] group-hover:text-white">
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 text-slate-700 transition group-hover:bg-slate-900 group-hover:text-white">
                   <Icon className="h-6 w-6" />
                 </span>
                 <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold text-slate-700">
                   {badge}
                 </span>
               </div>
-              <h3 className="mt-5 font-bold text-slate-900 group-hover:text-[#C8102E] transition text-base">
+              <h3 className="mt-5 font-bold text-slate-900 group-hover:text-brand transition text-base">
                 {name}
               </h3>
               <p className="mt-1.5 text-xs leading-relaxed text-slate-500">
                 {description}
               </p>
-              <span className="mt-5 inline-flex items-center gap-1 text-xs font-bold text-[#C8102E]">
+              <span className="mt-5 inline-flex items-center gap-1 text-xs font-bold text-brand">
                 View Offerings{" "}
                 <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-1" />
               </span>
@@ -346,7 +346,7 @@ export default function HomePage() {
       <section className="border-y border-slate-200 bg-slate-50/70 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-wider text-[#C8102E]">
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
               Transparent ETB Scopes
             </p>
             <h2 className="mt-1 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
@@ -368,7 +368,7 @@ export default function HomePage() {
       {/* Workflow & Protocol Steps */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="max-w-2xl">
-          <p className="text-xs font-bold uppercase tracking-wider text-[#C8102E]">
+          <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
             Protocol Mechanics
           </p>
           <h2 className="mt-1 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
@@ -382,7 +382,7 @@ export default function HomePage() {
         <div className="grid gap-6 border-t border-slate-200 pt-8 sm:grid-cols-3">
           {steps.map((step) => (
             <article key={step.number} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm space-y-3">
-              <span className="font-mono text-sm font-black text-[#C8102E]">
+              <span className="font-mono text-sm font-black text-slate-900">
                 {step.number}
               </span>
               <h3 className="text-base font-bold text-slate-900">{step.title}</h3>
@@ -395,21 +395,21 @@ export default function HomePage() {
       {/* Value Proportions Split Banner */}
       <section className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[1fr_.9fr] lg:px-8">
         <div className="rounded-3xl bg-[#1A222D] p-8 sm:p-10 text-white shadow-xl space-y-4">
-          <p className="text-xs font-bold uppercase tracking-wider text-rose-400 font-mono">
+          <p className="text-xs font-bold uppercase tracking-wider text-brand font-mono">
             FOR INDEPENDENT ENGINEERS &amp; CREATORS
           </p>
           <h2 className="text-2xl sm:text-3xl font-black">
             Build with guaranteed payment. Zero client ghosting.
           </h2>
           <p className="text-xs sm:text-sm leading-relaxed text-slate-300">
-            Never start work on unverified promises. With C²SA INTEL Escrow, funds are confirmed
+            Never start work on unverified promises. With MudayHub Escrow, funds are confirmed
             in non-custodial custody before you write a single line of code. Deliver quality work,
             get rated, and build your verifiable SHA-256 career record.
           </p>
           <div className="pt-4">
             <Link
               href="/register"
-              className="btn-c2sa !py-3 !px-6 !text-xs font-bold shadow-ochre inline-flex items-center gap-2"
+              className="btn-primary !py-3 !px-6 !text-xs font-bold shadow-ochre inline-flex items-center gap-2"
             >
               <span>Publish Your Services</span>
               <ArrowRight className="h-4 w-4" />
@@ -417,17 +417,17 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="rounded-3xl border border-emerald-200 bg-emerald-50/70 p-8 sm:p-10 shadow-sm space-y-4">
+        <div className="rounded-3xl border border-slate-200 bg-white p-8 sm:p-10 shadow-sm space-y-4">
           <div className="flex items-center justify-between">
-            <p className="text-xs font-bold uppercase tracking-wider text-emerald-800 font-mono">
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-500 font-mono">
               FOR ENTERPRISES &amp; SMES
             </p>
-            <ShieldCheck className="h-5 w-5 text-emerald-700" />
+            <ShieldCheck className="h-5 w-5 text-emerald-600" />
           </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-emerald-950">
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-900">
             Vetted talent. Zero deliverable hostage risk.
           </h2>
-          <div className="space-y-3 text-xs sm:text-sm text-emerald-900">
+          <div className="space-y-3 text-xs sm:text-sm text-slate-600">
             <p className="flex gap-2.5">
               <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
               <span>Full deliverable inspection before milestone release authorization.</span>
@@ -444,7 +444,7 @@ export default function HomePage() {
           <div className="pt-2">
             <Link
               href="/jobs/new"
-              className="btn-primary !py-3 !px-6 !text-xs font-bold inline-flex items-center gap-2"
+              className="btn-secondary !py-3 !px-6 !text-xs font-bold inline-flex items-center gap-2 hover:border-slate-400"
             >
               <span>Post Project Brief</span>
               <ArrowRight className="h-4 w-4" />
@@ -457,7 +457,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-slate-200 bg-white p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
           <div className="space-y-1.5 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-[#C8102E]">
+            <div className="inline-flex items-center gap-2 text-xs font-bold text-brand">
               <Mail className="h-4 w-4" />
               <span>ENTERPRISE ARCHITECTURE &amp; SECURITY SUPPORT</span>
             </div>
@@ -465,14 +465,14 @@ export default function HomePage() {
               Need Direct Custom Enterprise Engineering?
             </h3>
             <p className="text-xs text-slate-500">
-              Contact the C²SA INTEL corporate dispatch team directly for institutional SLAs and sovereign infrastructure projects.
+              Contact the MudayHub enterprise dispatch team directly for institutional SLAs and sovereign infrastructure projects.
             </p>
           </div>
           <a
-            href="mailto:contact.ccsa.intel@gmail.com"
-            className="btn-c2sa !py-3 !px-6 text-xs font-bold shrink-0 font-mono"
+            href="mailto:contact.mudayhub@gmail.com"
+            className="btn-secondary !py-3 !px-6 text-xs font-bold shrink-0 font-mono hover:border-slate-400"
           >
-            contact.ccsa.intel@gmail.com
+            contact.mudayhub@gmail.com
           </a>
         </div>
       </section>

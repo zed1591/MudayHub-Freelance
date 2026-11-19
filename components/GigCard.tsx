@@ -34,24 +34,24 @@ export function GigCard({ gig }: Props) {
         <span className="absolute bottom-3 left-3 rounded-xl border border-white/40 bg-white/90 px-2.5 py-1 text-[11px] font-bold text-slate-900 backdrop-blur-md shadow-sm">
           {gig.category}
         </span>
-        <span className="absolute top-3 right-3 rounded-xl border border-rose-600/30 bg-white/95 px-2.5 py-0.5 text-[10px] font-bold text-[#C8102E] backdrop-blur-md flex items-center gap-1 shadow-sm">
-          <ShieldCheck className="h-3 w-3 text-[#C8102E]" />
-          <span>C²SA Escrow</span>
+        <span className="absolute top-3 right-3 rounded-xl border border-emerald-600/20 bg-white/95 px-2.5 py-0.5 text-[10px] font-bold text-emerald-800 backdrop-blur-md flex items-center gap-1 shadow-sm">
+          <ShieldCheck className="h-3 w-3 text-emerald-600" />
+          <span>MudayHub Escrow</span>
         </span>
       </div>
 
       <div className="flex flex-1 flex-col p-5">
         {/* Freelancer profile */}
         <div className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-tr from-[#C8102E] to-[#BD5D38] text-xs font-bold text-white shadow-sm ring-1 ring-white/20">
+          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-slate-900 text-xs font-bold text-white shadow-sm ring-1 ring-white/20">
             {gig.freelancer?.full_name?.charAt(0) || "F"}
           </div>
           <div className="flex items-center gap-1.5 min-w-0">
-            <span className="truncate text-xs font-semibold text-slate-700 group-hover:text-[#C8102E] transition">
+            <span className="truncate text-xs font-semibold text-slate-700 group-hover:text-brand transition">
               {gig.freelancer?.full_name || "Marketplace professional"}
             </span>
             {gig.freelancer?.is_verified && (
-              <span title="C²SA Vetted Specialist">
+              <span title="MudayHub Vetted Specialist">
                 <BadgeCheck className="h-4 w-4 text-emerald-600 shrink-0" />
               </span>
             )}
@@ -59,7 +59,7 @@ export function GigCard({ gig }: Props) {
         </div>
 
         {/* Gig Title */}
-        <h3 className="mt-3 line-clamp-2 text-sm font-bold leading-snug text-slate-900 transition group-hover:text-[#C8102E]">
+        <h3 className="mt-3 line-clamp-2 text-sm font-bold leading-snug text-slate-900 transition group-hover:text-brand">
           {gig.title}
         </h3>
 

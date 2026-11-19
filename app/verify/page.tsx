@@ -67,8 +67,8 @@ export default function VerifyPortalPage() {
         </div>
 
         <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-100 text-brand-dark">
-            <Award className="h-5 w-5 text-brand" />
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-700">
+            <Award className="h-5 w-5" />
           </div>
           <h3 className="mt-4 text-sm font-bold text-slate-900">Portable Reputation</h3>
           <p className="mt-1 text-xs text-slate-600 leading-relaxed">
@@ -77,8 +77,8 @@ export default function VerifyPortalPage() {
         </div>
 
         <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-100 text-purple-700">
-            <ShieldCheck className="h-5 w-5" />
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-700">
+            <ShieldCheck className="h-5 w-5 text-emerald-600" />
           </div>
           <h3 className="mt-4 text-sm font-bold text-slate-900">Escrow Cleared</h3>
           <p className="mt-1 text-xs text-slate-600 leading-relaxed">

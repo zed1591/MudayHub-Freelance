@@ -85,7 +85,7 @@ export default function HowItWorksPage() {
         </div>
 
         <h1 className="mt-3 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">
-          How C²SA INTEL<span className="text-[#C8102E]"> Grid</span> Works
+          How MudayHub Works
         </h1>
         <p className="font-ethio mt-2 text-sm font-semibold text-slate-500">
           እንዴት እንደሚሰራ · ደህንነቱ የተጠበቀ የዲጂታል ስራዎች እና ኢንጂነሪንግ መድረክ
@@ -103,20 +103,20 @@ export default function HowItWorksPage() {
           return (
             <div
               key={s.n}
-              className="card-surface group relative flex flex-col sm:flex-row items-start gap-6 rounded-3xl border border-slate-200/90 p-8 transition hover:border-[#C8102E]/40 shadow-sm"
+              className="card-surface group relative flex flex-col sm:flex-row items-start gap-6 rounded-3xl border border-slate-200/90 p-8 transition hover:border-slate-300 shadow-sm"
             >
               <div className="flex items-center gap-4 sm:flex-col sm:items-center">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-rose-50 text-lg font-black text-[#C8102E] font-mono ring-1 ring-rose-200">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-slate-100 text-lg font-black text-slate-900 font-mono ring-1 ring-slate-200">
                   {s.n}
                 </span>
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-500 group-hover:text-[#C8102E] transition">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-500 group-hover:text-brand transition">
                   <Icon className="h-5 w-5" />
                 </div>
               </div>
 
               <div className="space-y-1.5 flex-1">
                 <div className="flex flex-wrap items-center gap-2">
-                  <h2 className="text-xl font-bold text-slate-900 group-hover:text-[#C8102E] transition">
+                  <h2 className="text-xl font-bold text-slate-900 group-hover:text-brand transition">
                     {s.title}
                   </h2>
                   <span className="font-ethio text-xs text-slate-500">
@@ -135,7 +135,7 @@ export default function HowItWorksPage() {
       {/* Platform vs Informal Comparison Table */}
       <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-10 shadow-sm space-y-6">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-[#C8102E]">
+          <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
             Trust Engineering
           </span>
           <h3 className="mt-1 text-2xl font-black text-slate-900">
@@ -177,18 +177,18 @@ export default function HowItWorksPage() {
       </div>
 
       {/* CTA Card */}
-      <div className="card-surface rounded-3xl border border-rose-500/20 p-8 sm:p-10 space-y-6 bg-gradient-to-br from-rose-50/40 via-white to-slate-50 shadow-sm">
+      <div className="card-surface rounded-3xl border border-slate-200 p-8 sm:p-10 space-y-6 bg-white shadow-sm">
         <h3 className="text-2xl font-black text-slate-900">
           Ready to experience high-trust digital engineering?
         </h3>
         <p className="max-w-2xl text-xs sm:text-sm leading-relaxed text-slate-600">
           Whether you are an enterprise seeking vetted software engineers or an independent specialist
-          looking for protected, reliable project contracts, C²SA INTEL delivers the infrastructure you need.
+          looking for protected, reliable project contracts, MudayHub delivers the infrastructure you need.
         </p>
 
         <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-100">
-          <Link href="/register" className="btn-c2sa !py-3 !px-6 font-bold shadow-ochre">
-            <span>Join C²SA Freelance Grid</span>
+          <Link href="/register" className="btn-primary !py-3 !px-6 font-bold shadow-ochre">
+            <span>Join MudayHub Network</span>
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link href="/escrow" className="btn-secondary !py-3 !px-6 font-semibold">

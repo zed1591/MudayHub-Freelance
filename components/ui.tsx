@@ -56,7 +56,7 @@ export function Badge({
     escrow: "bg-emerald-50 text-emerald-800 border-emerald-200",
     dispute: "bg-rose-50 text-rose-700 border-rose-200",
     muted: "bg-slate-50 text-slate-600 border-slate-200",
-    c2sa: "bg-rose-50 text-[#C8102E] border-rose-200 font-bold",
+    c2sa: "bg-slate-100 text-slate-800 border-slate-200 font-bold",
     "c2sa-vetted": "bg-emerald-50 text-emerald-800 border-emerald-300 font-extrabold",
   };
   return (

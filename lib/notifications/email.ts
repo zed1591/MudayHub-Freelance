@@ -129,7 +129,7 @@ export function formatEmailHtml(payload: TransactionalEmailPayload): string {
                   <strong>Security Note:</strong> MudayHub operations are protected by multi-signature escrow protocol. Never share verification codes or private credentials.
                 </p>
                 <p style="margin: 0;">
-                  Verify cryptographic Trust Deeds anytime at <a href="${baseUrl}/verify" style="color: #C8102E; text-decoration: none;">${baseUrl}/verify</a>.
+                  Verify cryptographic Trust Deeds anytime at <a href="${baseUrl}/verify" style="color: #D97721; text-decoration: none;">${baseUrl}/verify</a>.
                 </p>
               </div>
             </td>

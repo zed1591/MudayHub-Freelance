@@ -117,8 +117,8 @@ export default function ProposalsPage() {
             onClick={() => switchTab(key)}
             className={`rounded-full border px-4 py-2 text-xs font-semibold transition ${
               tab === key
-                ? "border-c2sa-crimson bg-c2sa-crimson text-white shadow-sm font-bold"
-                : "border-slate-200 bg-white text-slate-600 hover:border-c2sa-crimson/40 hover:text-slate-900"
+                ? "border-slate-900 bg-slate-900 text-white shadow-sm font-bold"
+                : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900"
             }`}
           >
             {label}<span className="ml-2 opacity-80 font-mono font-bold">{count}</span>
@@ -169,7 +169,7 @@ export default function ProposalsPage() {
           <button
             type="button"
             onClick={() => switchTab("all")}
-            className="text-xs text-c2sa-crimson hover:underline font-bold"
+            className="text-xs text-brand hover:underline font-bold"
           >
             Show all ({proposals.length})
           </button>
@@ -192,7 +192,7 @@ export default function ProposalsPage() {
                 : "You haven't submitted any project proposals yet. Explore available client briefs to submit your bid."}
             </p>
             <div className="mt-5">
-              <Link href="/jobs" className="btn-c2sa !text-xs !py-2.5 !px-5 font-bold inline-block">
+              <Link href="/jobs" className="btn-primary !text-xs !py-2.5 !px-5 font-bold inline-block">
                 {isClient ? "View Open Projects" : "Find Open Opportunities"}
               </Link>
             </div>
@@ -215,7 +215,7 @@ export default function ProposalsPage() {
                   {isClient ? "Awarded & Hired" : "Accepted & Awarded"}
                 </span>
               ) : p.status === "rejected" ? (
-                <span className="inline-flex items-center gap-1 rounded-full border border-rose-300 bg-rose-50 px-2.5 py-0.5 text-[11px] font-bold text-rose-700">
+                <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-100 px-2.5 py-0.5 text-[11px] font-bold text-slate-600">
                   <XCircle className="h-3 w-3" />
                   Not Selected
                 </span>
@@ -230,7 +230,7 @@ export default function ProposalsPage() {
               <Link
                 key={p.id}
                 href={`/jobs/${p.job_id}`}
-                className="card-surface group flex flex-col justify-between gap-4 rounded-3xl p-6 transition-all duration-200 hover:border-c2sa-crimson/40 hover:shadow-sm sm:flex-row sm:items-center border border-slate-200/90"
+                className="card-surface group flex flex-col justify-between gap-4 rounded-3xl p-6 transition-all duration-200 hover:border-slate-300 hover:shadow-sm sm:flex-row sm:items-center border border-slate-200/90"
               >
                 <div className="space-y-2">
                   <div className="flex flex-wrap items-center gap-2">
@@ -249,7 +249,7 @@ export default function ProposalsPage() {
                     )}
                   </div>
 
-                  <h3 className="text-base font-bold text-slate-900 transition group-hover:text-c2sa-crimson">
+                  <h3 className="text-base font-bold text-slate-900 transition group-hover:text-brand">
                     {jobTitle}
                   </h3>
 
@@ -285,7 +285,7 @@ export default function ProposalsPage() {
                     </p>
                   </div>
 
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-slate-500 transition group-hover:border-c2sa-crimson group-hover:bg-c2sa-crimson group-hover:text-white">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-slate-500 transition group-hover:border-slate-900 group-hover:bg-slate-900 group-hover:text-white">
                     <ArrowRight className="h-4 w-4" />
                   </div>
                 </div>

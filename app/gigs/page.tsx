@@ -114,15 +114,11 @@ export default function GigsMarketplacePage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       {/* Top Banner & Search */}
-      <div className="card-surface relative overflow-hidden rounded-3xl border border-rose-500/20 p-8 sm:p-12 shadow-sm bg-gradient-to-br from-rose-50/50 via-white to-slate-50">
-        <div
-          className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full opacity-20 blur-3xl"
-          style={{ background: "radial-gradient(circle, #C8102E, #BD5D38, transparent 70%)" }}
-        />
+      <div className="card-surface relative overflow-hidden rounded-3xl border border-slate-200 p-8 sm:p-12 shadow-sm bg-white">
         <div className="relative z-10 max-w-2xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-rose-500/20 bg-rose-50 px-3.5 py-1 text-xs font-bold text-[#C8102E]">
-            <Sparkles className="h-3.5 w-3.5 text-[#C8102E]" />
-            <span>C²SA INTEL &middot; Services &amp; Packages Marketplace</span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-3.5 py-1 text-xs font-semibold text-slate-700">
+            <Sparkles className="h-3.5 w-3.5 text-brand" />
+            <span>MudayHub &middot; Services &amp; Packages Marketplace</span>
           </div>
           <h1 className="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">
             Pre-Packaged Services &amp; Gigs

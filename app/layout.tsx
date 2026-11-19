@@ -81,7 +81,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#C8102E",
+  themeColor: "#0F172A",
   width: "device-width",
   initialScale: 1,
 };
@@ -89,7 +89,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen font-sans antialiased bg-canvas text-slate-800 selection:bg-[#C8102E] selection:text-white">
+      <body className="min-h-screen font-sans antialiased bg-canvas text-slate-800 selection:bg-slate-900 selection:text-white">
         <PwaRegister />
         <SessionProvider>
           <AppShell>{children}</AppShell>

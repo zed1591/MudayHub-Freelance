@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ShieldAlert, AlertTriangle, Scale, FileText, Link as LinkIcon } from "lucide-react";
 import { DISPUTE_CATEGORIES, type DisputeCategory } from "@/lib/types";
+import { useLanguage } from "@/components/LanguageProvider";
 
 interface Props {
   busy: boolean;
@@ -15,6 +16,7 @@ interface Props {
 }
 
 export function DisputeBox({ busy, onRaiseDispute }: Props) {
+  const { language } = useLanguage();
   const [category, setCategory] = useState<DisputeCategory>("quality_mismatch");
   const [reason, setReason] = useState("");
   const [evidenceUrl, setEvidenceUrl] = useState("");
@@ -59,7 +61,7 @@ export function DisputeBox({ busy, onRaiseDispute }: Props) {
               >
                 {(Object.keys(DISPUTE_CATEGORIES) as DisputeCategory[]).map((cat) => (
                   <option key={cat} value={cat}>
-                    {DISPUTE_CATEGORIES[cat].label} ({DISPUTE_CATEGORIES[cat].amharic})
+                    {language === "am" ? DISPUTE_CATEGORIES[cat].amharic : DISPUTE_CATEGORIES[cat].label}
                   </option>
                 ))}
               </select>

@@ -18,6 +18,8 @@ import {
   Wallet,
 } from "lucide-react";
 import { useSession } from "./SessionProvider";
+import { useLanguage } from "./LanguageProvider";
+import { LanguageSelector } from "./LanguageSelector";
 import { cn } from "@/lib/utils";
 
 interface NavLinkItem {
@@ -38,6 +40,7 @@ interface SidebarProps {
 
 export function Sidebar({ onNavigate, className }: SidebarProps) {
   const { user, logout, unreadCount } = useSession();
+  const { language } = useLanguage();
   const pathname = usePathname();
   const router = useRouter();
 
@@ -198,7 +201,7 @@ export function Sidebar({ onNavigate, className }: SidebarProps) {
               </span>
             </div>
             <p className="text-[10px] font-bold text-slate-500 font-mono tracking-wider uppercase">
-              FREELANCE GRID · ሙዳይ
+              {language === "am" ? "የሙዳይ ፍሪላንስ" : "FREELANCE WORKSPACE"}
             </p>
           </div>
         </Link>
@@ -289,8 +292,14 @@ export function Sidebar({ onNavigate, className }: SidebarProps) {
         </nav>
       </div>
 
-      {/* Clean Bottom Session Profile */}
-      <div className="pt-4 border-t border-slate-200">
+      {/* Clean Bottom Session Profile & Language Selector */}
+      <div className="pt-3 border-t border-slate-200 space-y-2.5">
+        <div className="flex items-center justify-between px-1">
+          <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+            {language === "am" ? "ቋንቋ ይምረጡ" : "Language"}
+          </span>
+          <LanguageSelector />
+        </div>
         {user ? (
           <div className="flex items-center justify-between rounded-xl bg-slate-50 p-2.5 border border-slate-200 shadow-sm">
             <Link

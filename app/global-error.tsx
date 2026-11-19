@@ -23,9 +23,6 @@ export default function RootGlobalError({
             <Image src="/logo-emblem.png" alt="Muday-Freelance" width={32} height={32} />
           </div>
           <h1 className="mt-5 text-xl font-black text-slate-900">Application Error</h1>
-          <p className="mt-1 text-xs font-semibold text-slate-500 font-ethio">
-            ስርዓቱ ለጊዜው መረጃዎችን መጫን አልቻለም።
-          </p>
           <p className="mt-3 text-xs text-slate-600 leading-relaxed">
             A fatal error occurred at the layout layer. Please refresh your browser to reload MudayHub Freelance.
           </p>

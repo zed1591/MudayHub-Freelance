@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import { useSession } from "./SessionProvider";
 import { Sidebar } from "./Sidebar";
+import { useLanguage } from "./LanguageProvider";
+import { LanguageSelector } from "./LanguageSelector";
 
 interface NavbarProps {
   isWorkspace?: boolean;
@@ -21,6 +23,7 @@ interface NavbarProps {
 
 export function Navbar({ isWorkspace = false }: NavbarProps) {
   const { user, unreadCount } = useSession();
+  const { t } = useLanguage();
   const pathname = usePathname();
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
@@ -110,7 +113,7 @@ export function Navbar({ isWorkspace = false }: NavbarProps) {
                     pathname.startsWith("/gigs") ? "bg-slate-100 text-slate-900 font-extrabold" : ""
                   }`}
                 >
-                  Services &amp; Gigs
+                  {t("services")}
                 </Link>
                 <Link
                   href="/jobs"
@@ -118,7 +121,7 @@ export function Navbar({ isWorkspace = false }: NavbarProps) {
                     pathname.startsWith("/jobs") ? "bg-slate-100 text-slate-900 font-extrabold" : ""
                   }`}
                 >
-                  Project RFPs
+                  {t("rfps")}
                 </Link>
                 <Link
                   href="/talent"
@@ -126,7 +129,7 @@ export function Navbar({ isWorkspace = false }: NavbarProps) {
                     pathname.startsWith("/talent") ? "bg-slate-100 text-slate-900 font-extrabold" : ""
                   }`}
                 >
-                  Find Talent
+                  {t("talent")}
                 </Link>
                 <Link
                   href="/escrow"
@@ -134,7 +137,7 @@ export function Navbar({ isWorkspace = false }: NavbarProps) {
                     pathname === "/escrow" ? "bg-slate-100 text-slate-900 font-extrabold" : ""
                   }`}
                 >
-                  Escrow Security
+                  {t("escrow")}
                 </Link>
                 <Link
                   href="/how-it-works"
@@ -142,7 +145,7 @@ export function Navbar({ isWorkspace = false }: NavbarProps) {
                     pathname === "/how-it-works" ? "bg-slate-100 text-slate-900 font-extrabold" : ""
                   }`}
                 >
-                  How It Works
+                  {t("howItWorks")}
                 </Link>
               </nav>
             </div>
@@ -158,7 +161,8 @@ export function Navbar({ isWorkspace = false }: NavbarProps) {
           )}
 
           {/* Desktop Right: Public CTAs OR Workspace Controls */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2.5">
+            <LanguageSelector />
             {!isWorkspace ? (
               user ? (
                 <>
@@ -167,7 +171,7 @@ export function Navbar({ isWorkspace = false }: NavbarProps) {
                     className="inline-flex items-center gap-1.5 text-xs text-slate-600 hover:text-brand transition font-medium mr-1"
                   >
                     <Compass className="h-3.5 w-3.5 text-brand" />
-                    <span>Protocol</span>
+                    <span>{t("protocol")}</span>
                   </Link>
                   <Link
                     href="/notifications"
@@ -186,32 +190,32 @@ export function Navbar({ isWorkspace = false }: NavbarProps) {
                     className="btn-primary !py-2 !px-4 !text-xs font-bold inline-flex items-center gap-1.5 shadow-ochre"
                   >
                     <LayoutDashboard className="h-3.5 w-3.5" />
-                    <span>Open Dashboard →</span>
+                    <span>{t("openDashboard")}</span>
                   </Link>
                 </>
               ) : (
                 <>
-                  <div className="inline-flex items-center gap-1.5 rounded-full border border-emerald-700/20 bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800 mr-2">
+                  <div className="inline-flex items-center gap-1.5 rounded-full border border-emerald-700/20 bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800 mr-1">
                     <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" />
-                    <span>Telebirr &amp; CBE Escrow Protected</span>
+                    <span>{t("escrowProtected")}</span>
                   </div>
                   <Link
                     href="/login"
                     className="px-3.5 py-2 text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition"
                   >
-                    Sign In
+                    {t("signIn")}
                   </Link>
                   <Link
                     href="/jobs/new"
                     className="btn-secondary !py-2 !px-3.5 !text-xs font-bold"
                   >
-                    + Post a Project
+                    {t("postProject")}
                   </Link>
                   <Link
                     href="/register"
                     className="btn-primary !py-2 !px-4 !text-xs font-bold shadow-ochre"
                   >
-                    Get Started
+                    {t("getStarted")}
                   </Link>
                 </>
               )
@@ -223,18 +227,19 @@ export function Navbar({ isWorkspace = false }: NavbarProps) {
                   className="inline-flex items-center gap-1.5 text-xs text-slate-600 hover:text-brand transition font-medium"
                 >
                   <Compass className="h-3.5 w-3.5 text-brand" />
-                  <span>How It Works</span>
+                  <span>{t("howItWorks")}</span>
                 </Link>
                 <div className="inline-flex items-center gap-2 rounded-full border border-emerald-700/20 bg-emerald-50 px-3.5 py-1 text-xs font-semibold text-emerald-800">
                   <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" />
-                  <span>Escrow Active</span>
+                  <span>{t("escrowActive")}</span>
                 </div>
               </div>
             )}
           </div>
 
-          {/* Mobile Right: Quick Drawer Indicator */}
+          {/* Mobile Right: Quick Drawer Indicator & Language */}
           <div className="flex md:hidden items-center gap-2">
+            <LanguageSelector />
             {user && unreadCount > 0 && (
               <Link
                 href="/notifications"
@@ -272,16 +277,19 @@ export function Navbar({ isWorkspace = false }: NavbarProps) {
           <div className="relative z-50 flex h-full w-[85%] max-w-sm flex-col bg-white shadow-2xl">
             <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
               <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-                Menu
+                {t("menu")}
               </span>
-              <button
-                type="button"
-                onClick={() => setMobileDrawerOpen(false)}
-                className="rounded-xl border border-slate-200 p-1.5 text-slate-500 hover:bg-slate-100 hover:text-slate-900"
-                aria-label="Close"
-              >
-                <X className="h-4 w-4" />
-              </button>
+              <div className="flex items-center gap-2">
+                <LanguageSelector />
+                <button
+                  type="button"
+                  onClick={() => setMobileDrawerOpen(false)}
+                  className="rounded-xl border border-slate-200 p-1.5 text-slate-500 hover:bg-slate-100 hover:text-slate-900"
+                  aria-label="Close"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              </div>
             </div>
 
             <div className="flex-1 overflow-y-auto">

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   ArrowRight,
@@ -18,6 +20,7 @@ import {
 import { GIG_CATEGORIES } from "@/lib/types";
 import { HomeCategoryTabs } from "@/components/HomeCategoryTabs";
 import { EscrowCalculator } from "@/components/escrow/EscrowCalculator";
+import { useLanguage } from "@/components/LanguageProvider";
 
 const steps = [
   {
@@ -76,6 +79,8 @@ const METRICS = [
 ];
 
 export default function HomePage() {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-full space-y-16 pb-16">
       {/* Hero Section */}
@@ -92,19 +97,18 @@ export default function HomePage() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-brand/20 bg-brand/10 px-3.5 py-1.5 text-xs font-bold text-brand-dark">
               <span className="flex h-2 w-2 rounded-full bg-brand animate-pulse" />
-              <span>MUDAYHUB FREELANCE MARKETPLACE &middot; ሙዳይ ፍሪላንስ</span>
+              <span>{t("heroTag")}</span>
             </div>
 
             <h1 className="mt-6 max-w-3xl text-balance text-4xl font-black leading-[1.08] tracking-[-0.04em] text-slate-900 sm:text-5xl lg:text-[3.6rem]">
-              Ethiopian Tech Talent &amp; Digital Services.{" "}
+              {t("heroTitle")}{" "}
               <span className="bg-gradient-to-r from-brand via-terracotta to-amber-500 bg-clip-text text-transparent">
-                Secured by Escrow.
+                {t("heroHighlight")}
               </span>
             </h1>
 
             <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
-              Commission vetted Ethiopian software engineers, designers, auditors, and digital creators.
-              Zero prepayment risk. Funds are secured in milestone escrow until verified delivery.
+              {t("heroSub")}
             </p>
 
             {/* Live Search Form */}
@@ -121,7 +125,7 @@ export default function HomePage() {
                 <input
                   name="q"
                   aria-label="Search services"
-                  placeholder="What do you need built? (e.g. Telebirr SDK, Next.js, UI/UX)..."
+                  placeholder={t("searchPlaceholder")}
                   className="h-12 w-full rounded-xl border-0 bg-transparent pl-10 pr-3 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:ring-2 focus:ring-brand/40"
                 />
               </label>
@@ -134,7 +138,7 @@ export default function HomePage() {
                 defaultValue=""
                 className="h-12 rounded-xl border border-slate-200 bg-slate-50/80 px-3 text-sm text-slate-700 outline-none focus:border-brand/50 sm:max-w-52"
               >
-                <option value="">All Categories</option>
+                <option value="">{t("allCategories")}</option>
                 {GIG_CATEGORIES.map((category) => (
                   <option key={category} value={category}>
                     {category}
@@ -145,12 +149,12 @@ export default function HomePage() {
                 type="submit"
                 className="btn-primary h-12 !rounded-xl !px-6 text-sm font-bold shadow-ochre"
               >
-                Search Services
+                {t("searchBtn")}
               </button>
             </form>
 
             <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs text-slate-500">
-              <span className="font-bold text-slate-700">Popular:</span>
+              <span className="font-bold text-slate-700">{t("popular")}</span>
               {[
                 ["Cyber Pentest", "Cybersecurity & Auditing"],
                 ["Full-Stack Web", "Web & Full Stack"],
@@ -172,14 +176,14 @@ export default function HomePage() {
                 href="/register"
                 className="btn-primary !rounded-xl !px-6 !py-3.5 text-sm font-bold shadow-ochre inline-flex items-center gap-2"
               >
-                <span>Join MudayHub Network</span>
+                <span>{t("joinNetwork")}</span>
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Link>
               <Link
                 href="/how-it-works"
                 className="btn-secondary !rounded-xl !px-5 !py-3.5 text-sm font-bold"
               >
-                <span>How Escrow Works</span>
+                <span>{t("howItWorks")}</span>
               </Link>
             </div>
 

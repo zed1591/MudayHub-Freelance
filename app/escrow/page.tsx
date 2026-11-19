@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   ArrowRight,
@@ -9,6 +11,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { EscrowCalculator } from "@/components/escrow/EscrowCalculator";
+import { useLanguage } from "@/components/LanguageProvider";
 
 const controls = [
   {
@@ -36,20 +39,24 @@ const stateFlow = [
 ];
 
 export default function EscrowPage() {
+  const { language, t } = useLanguage();
+  const isAm = language === "am";
+
   return (
     <main className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 space-y-16">
       {/* Header */}
       <header className="max-w-3xl">
         <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-3.5 py-1 text-xs font-semibold text-slate-800">
           <ShieldCheck aria-hidden="true" className="h-4 w-4 text-emerald-600" />
-          <span>MudayHub Sovereign Escrow Protocol</span>
+          <span>{t("escrowPageBadge")}</span>
         </div>
         <h1 className="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">
-          High-Trust Milestone Escrow <span className="text-brand">&middot; የዋስትና አሰራር</span>
+          {t("escrowPageTitle")}
         </h1>
         <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-600">
-          MudayHub eliminates freelance payment risk in Ethiopia. Funds are locked prior to sprint initiation,
-          guaranteeing specialist payout upon delivery while protecting client capital against non-delivery.
+          {isAm
+            ? "ሙዳይሀብ በኢትዮጵያ ውስጥ የፍሪላንስ ስራዎች የክፍያ ስጋትን ሙሉ ለሙሉ ያስቀራል። ክፍያዎ አስቀድሞ በታማኝ የዋስትና ሂሳብ ውስጥ ደህንነቱ ተጠብቆ ይቆያል።"
+            : "MudayHub eliminates freelance payment risk in Ethiopia. Funds are locked prior to sprint initiation, guaranteeing specialist payout upon delivery while protecting client capital against non-delivery."}
         </p>
       </header>
 

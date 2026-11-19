@@ -28,11 +28,13 @@ import type { Gig, Job, Profile, Review } from "@/lib/types";
 import { GigCard } from "@/components/GigCard";
 import { formatEtb, formatMemberSince } from "@/lib/utils";
 import { computeFreelancerLevel } from "@/lib/levels";
+import { useLanguage } from "@/components/LanguageProvider";
 
 type ProfileTab = "services" | "portfolio" | "experience" | "education" | "jobs" | "reviews";
 
 export default function PublicProfilePage() {
   const { id } = useParams<{ id: string }>();
+  const { language } = useLanguage();
   const [profile, setProfile] = useState<Profile | null>(null);
   const [completed, setCompleted] = useState(0);
   const [gigs, setGigs] = useState<Gig[]>([]);
@@ -156,7 +158,7 @@ export default function PublicProfilePage() {
                     {level.id === "top_rated" && <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-500" />}
                     {level.id === "rising" && <Zap className="h-3.5 w-3.5 text-brand" />}
                     {level.id === "verified" && <Award className="h-3.5 w-3.5 text-emerald-600" />}
-                    <span>{level.badgeLabel} ({level.amharicTitle})</span>
+                    <span>{language === "am" ? level.amharicTitle : level.badgeLabel}</span>
                   </span>
                 )}
               </div>
@@ -328,7 +330,9 @@ export default function PublicProfilePage() {
               <div className="flex items-center gap-2">
                 <TrendingUp className="h-4 w-4 text-brand" />
                 <span className="text-xs font-bold text-slate-900">
-                  Specialist Tier Progression · ደረጃ {level.levelNumber} ({level.title} - {level.amharicTitle})
+                  {language === "am"
+                    ? `የባለሙያ ደረጃ እድገት · ደረጃ ${level.levelNumber} (${level.amharicTitle})`
+                    : `Specialist Tier Progression · Level ${level.levelNumber} (${level.title})`}
                 </span>
               </div>
               <span className="text-[11px] font-semibold text-slate-500 font-mono">

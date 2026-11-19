@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { AppShell } from "@/components/AppShell";
 import { PwaRegister } from "@/components/PwaRegister";
 import { SessionProvider } from "@/components/SessionProvider";
+import { LanguageProvider } from "@/components/LanguageProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -91,9 +92,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="min-h-screen font-sans antialiased bg-canvas text-slate-800 selection:bg-slate-900 selection:text-white">
         <PwaRegister />
-        <SessionProvider>
-          <AppShell>{children}</AppShell>
-        </SessionProvider>
+        <LanguageProvider>
+          <SessionProvider>
+            <AppShell>{children}</AppShell>
+          </SessionProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

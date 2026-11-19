@@ -16,9 +16,11 @@ import {
 } from "lucide-react";
 import { formatEtb, formatMemberSince, relativeTime } from "@/lib/utils";
 import type { Job, Profile, Proposal } from "@/lib/types";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function JobDetailPage() {
   const { id } = useParams<{ id: string }>();
+  const { language } = useLanguage();
   const [job, setJob] = useState<(Job & { profiles?: Profile }) | null>(null);
   const [proposals, setProposals] = useState<Proposal[]>([]);
   const [me, setMe] = useState<{ id: string; profile: Profile } | null>(null);
@@ -148,7 +150,7 @@ export default function JobDetailPage() {
               {job.profiles?.is_verified ? (
                 <span className="inline-flex items-center gap-1 rounded-full border border-emerald-300 bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-800">
                   <CheckCircle2 className="h-3 w-3 text-emerald-600" />
-                  <span>Verified Client / የተረጋገጠ ደንበኛ</span>
+                  <span>{language === "am" ? "የተረጋገጠ ደንበኛ" : "Verified Client"}</span>
                 </span>
               ) : (
                 <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-600">

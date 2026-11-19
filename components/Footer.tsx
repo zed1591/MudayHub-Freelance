@@ -1,8 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { ShieldCheck } from "lucide-react";
+import { useLanguage } from "./LanguageProvider";
+import { LanguageSelector } from "./LanguageSelector";
 
 export function Footer() {
+  const { language, t } = useLanguage();
+
   return (
     <footer className="mt-12 border-t border-slate-200 bg-white text-slate-600">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
@@ -22,45 +28,45 @@ export function Footer() {
               <span className="text-base font-black tracking-tight text-slate-900">
                 Muday<span className="text-brand">Hub</span>
               </span>
-              <span className="text-xs font-bold text-slate-400 font-ethio">
-                · ሙዳይ ፍሪላንስ
+              <span className="text-xs font-bold text-slate-400 font-mono uppercase">
+                {language === "am" ? "የሙዳይ ፍሪላንስ" : "Freelance"}
               </span>
             </Link>
 
             <p className="max-w-md text-xs leading-relaxed text-slate-500">
-              Ethiopia&apos;s digital freelance marketplace. Connect with vetted software engineers, designers, and digital specialists with milestone escrow protection.
+              {t("footerTagline")}
             </p>
 
             <div className="inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-50 px-3 py-0.5 text-[11px] font-semibold text-emerald-800">
               <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" />
-              <span>Telebirr &amp; CBE Birr Escrow Protected</span>
+              <span>{t("escrowProtected")}</span>
             </div>
           </div>
 
           {/* Marketplace Links */}
           <div className="space-y-2.5">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900">
-              Marketplace
+              {language === "am" ? "የገበያ አገልግሎቶች" : "Marketplace"}
             </h4>
             <ul className="space-y-1.5 text-xs text-slate-600">
               <li>
                 <Link href="/gigs" className="transition hover:text-brand">
-                  Services Catalog
+                  {t("services")}
                 </Link>
               </li>
               <li>
                 <Link href="/jobs" className="transition hover:text-brand">
-                  Project RFPs &amp; Bids
+                  {t("rfps")}
                 </Link>
               </li>
               <li>
                 <Link href="/talent" className="transition hover:text-brand">
-                  Specialist Directory
+                  {t("talent")}
                 </Link>
               </li>
               <li>
                 <Link href="/jobs/new" className="transition hover:text-brand">
-                  Post a Project Brief
+                  {t("postProject")}
                 </Link>
               </li>
             </ul>
@@ -69,27 +75,27 @@ export function Footer() {
           {/* Trust & Safety Links */}
           <div className="space-y-2.5">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900">
-              Trust &amp; Governance
+              {language === "am" ? "ደህንነት እና ዋስትና" : "Trust & Governance"}
             </h4>
             <ul className="space-y-1.5 text-xs text-slate-600">
               <li>
                 <Link href="/how-it-works" className="transition hover:text-brand">
-                  How Escrow Works
+                  {t("howItWorks")}
                 </Link>
               </li>
               <li>
                 <Link href="/escrow" className="transition hover:text-brand">
-                  Payment Protection
+                  {t("escrow")}
                 </Link>
               </li>
               <li>
                 <Link href="/verify" className="transition hover:text-brand">
-                  Verify Trust Deeds
+                  {language === "am" ? "የክፍያ ሰነድ ማረጋገጫ" : "Verify Trust Deeds"}
                 </Link>
               </li>
               <li>
                 <Link href="/admin/disputes" className="transition hover:text-brand">
-                  Dispute Resolution
+                  {language === "am" ? "የሽምግልና ማዕከል" : "Dispute Resolution"}
                 </Link>
               </li>
             </ul>
@@ -97,22 +103,26 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-slate-100 pt-6 text-[11px] text-slate-400 sm:flex-row">
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-slate-100 pt-6 text-[11px] text-slate-400 sm:flex-row">
           <p>
-            &copy; {new Date().getFullYear()} MudayHub (ሙዳይ ፍሪላንስ). All rights reserved.
+            &copy; {new Date().getFullYear()} MudayHub. {t("copyright")}
           </p>
-          <div className="flex items-center gap-3">
-            <Link href="/how-it-works" className="hover:text-slate-700 transition">
-              Protocol Rules
-            </Link>
-            <span>&middot;</span>
-            <Link href="/escrow" className="hover:text-slate-700 transition">
-              Telebirr Settlement
-            </Link>
-            <span>&middot;</span>
-            <Link href="/verify" className="hover:text-slate-700 transition">
-              SHA-256 Ledger
-            </Link>
+
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
+              <Link href="/how-it-works" className="hover:text-slate-700 transition">
+                {language === "am" ? "ደንቦች" : "Protocol Rules"}
+              </Link>
+              <span>&middot;</span>
+              <Link href="/escrow" className="hover:text-slate-700 transition">
+                {language === "am" ? "ቴሌብር" : "Telebirr Settlement"}
+              </Link>
+              <span>&middot;</span>
+              <Link href="/verify" className="hover:text-slate-700 transition">
+                SHA-256
+              </Link>
+            </div>
+            <LanguageSelector />
           </div>
         </div>
       </div>

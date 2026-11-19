@@ -115,7 +115,7 @@ function RegisterForm() {
 
         <div className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-brand/25 bg-amber-50 px-3.5 py-1 text-xs font-bold text-brand shadow-sm">
           <Sparkles className="h-3.5 w-3.5 text-brand" />
-          <span>MudayHub Freelance · ሙዳይ ፍሪላንስ</span>
+          <span>MudayHub Freelance Network</span>
         </div>
 
         <h1 className="mt-3 text-2xl font-black tracking-tight text-slate-900 sm:text-3xl lg:text-4xl">

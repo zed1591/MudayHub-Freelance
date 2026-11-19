@@ -8,6 +8,7 @@ import { JobCard } from "@/components/JobCard";
 import { JOB_CATEGORIES, type Job } from "@/lib/types";
 import { jobsApi } from "@/lib/api";
 import { useSession } from "@/components/SessionProvider";
+import { useLanguage } from "@/components/LanguageProvider";
 
 type SortKey = "newest" | "budget_asc" | "budget_desc";
 
@@ -25,6 +26,7 @@ function sortJobs(jobs: Job[], sort: SortKey): Job[] {
 
 function JobsList() {
   const { user } = useSession();
+  const { t } = useLanguage();
   const searchParams = useSearchParams();
   const isClient = user?.role === "client";
 
@@ -88,15 +90,13 @@ function JobsList() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-3.5 py-1 text-xs font-semibold text-slate-700">
               <Briefcase className="h-3.5 w-3.5 text-brand" />
-              <span>MudayHub &middot; Project RFPs · የፕሮጀክት ጨረታዎች</span>
+              <span>{t("rfpPageBadge")}</span>
             </div>
             <h1 className="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">
-              Project Requests &amp; RFPs
+              {t("rfpPageTitle")}
             </h1>
             <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
-              {isClient
-                ? "Browse open marketplace briefs or manage your company's custom requirements and view submitted proposals."
-                : "Explore open project briefs and submit formal solution pitches with your proposed milestones, pricing, and turnaround."}
+              {isClient ? t("rfpPageSubClient") : t("rfpPageSubFreelancer")}
             </p>
 
             {/* Client-specific View Switcher (My Postings vs All Marketplace) */}

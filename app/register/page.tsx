@@ -110,10 +110,10 @@ function RegisterForm() {
       {/* Header Banner */}
       <div className="relative z-10 text-center">
         {/* Logo Emblem */}
-        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-rose-500/30 bg-[#1A222D] p-2 shadow-glow transition hover:scale-105">
+        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-brand/30 bg-[#1A222D] p-2 shadow-glow transition hover:scale-105">
           <Image
-            src="/c2sa-emblem.webp"
-            alt="C²SA INTEL"
+            src="/logo-emblem.png"
+            alt="MudayHub Freelance"
             width={44}
             height={44}
             className="object-contain"
@@ -121,13 +121,13 @@ function RegisterForm() {
           />
         </div>
 
-        <div className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-rose-500/25 bg-rose-50 px-3.5 py-1 text-xs font-bold text-[#C8102E] shadow-sm">
-          <Sparkles className="h-3.5 w-3.5 text-[#C8102E]" />
-          <span>C²SA INTEL Grid · Sovereign Freelance · ሙዳይ ፍሪላንስ</span>
+        <div className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-brand/25 bg-amber-50 px-3.5 py-1 text-xs font-bold text-brand shadow-sm">
+          <Sparkles className="h-3.5 w-3.5 text-brand" />
+          <span>MudayHub Freelance · ሙዳይ ፍሪላንስ</span>
         </div>
 
         <h1 className="mt-3 text-2xl font-black tracking-tight text-slate-900 sm:text-3xl lg:text-4xl">
-          Join C²SA<span className="text-[#C8102E]"> INTEL Freelance Grid</span>
+          Join Muday<span className="text-brand">Hub Freelance</span>
         </h1>
         <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-lg mx-auto leading-relaxed">
           Join verified software engineers, cybersecurity specialists, and hiring clients with automated milestone-based ETB escrow.

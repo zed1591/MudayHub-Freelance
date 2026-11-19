@@ -69,19 +69,19 @@ export default function HowItWorksPage() {
     <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 space-y-16">
       {/* Top Header */}
       <div className="text-center max-w-3xl mx-auto">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-rose-500/30 bg-[#1A222D] p-2 shadow-glow">
+        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-brand/30 bg-[#1A222D] p-2 shadow-glow">
           <Image
-            src="/c2sa-emblem.webp"
-            alt="C²SA INTEL"
+            src="/logo-emblem.png"
+            alt="MudayHub Freelance"
             width={48}
             height={48}
             className="object-contain"
           />
         </div>
 
-        <div className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-rose-500/30 bg-rose-50 px-3.5 py-1 text-xs font-bold text-[#C8102E]">
+        <div className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-amber-50 px-3.5 py-1 text-xs font-bold text-brand">
           <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" />
-          <span>C²SA INTEL Sovereign Freelance Protocol</span>
+          <span>MudayHub Sovereign Freelance Protocol</span>
         </div>
 
         <h1 className="mt-3 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">

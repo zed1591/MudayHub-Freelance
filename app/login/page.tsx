@@ -68,10 +68,10 @@ export default function LoginPage() {
     <div className="mx-auto flex max-w-xl flex-col px-4 py-16 sm:px-6">
       <div className="text-center">
         {/* Logo Emblem */}
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-rose-500/30 bg-[#1A222D] p-2 shadow-glow">
+        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-brand/30 bg-[#1A222D] p-2 shadow-glow">
           <Image
-            src="/c2sa-emblem.webp"
-            alt="C²SA INTEL"
+            src="/logo-emblem.png"
+            alt="MudayHub Freelance"
             width={48}
             height={48}
             className="object-contain"
@@ -79,10 +79,10 @@ export default function LoginPage() {
         </div>
 
         <h1 className="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-          Sign In to C²SA<span className="text-[#C8102E]"> INTEL Grid</span>
+          Sign In to Muday<span className="text-brand">Hub</span>
         </h1>
         <p className="mt-2 text-xs sm:text-sm text-slate-600">
-          Access your cryptographic escrow workspace, project bids, and verified deliverables.
+          Access your secured Ethiopian escrow workspace, project bids, and verified deliverables.
         </p>
       </div>
 

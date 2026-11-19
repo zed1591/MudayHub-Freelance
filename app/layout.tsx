@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   icons: {
     icon: "/c2sa-intel-logo.svg",
-    apple: "/c2sa-emblem.webp",
+    apple: "/logo-emblem.png",
   },
   appleWebApp: {
     capable: true,

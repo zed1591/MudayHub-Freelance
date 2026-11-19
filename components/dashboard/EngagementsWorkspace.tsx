@@ -115,7 +115,7 @@ export function EngagementsWorkspace({
             >
               <FileCheck2 className={`h-4 w-4 ${subTab === "contracts" ? "text-brand" : "text-slate-400"}`} />
               <span>Escrow Contracts</span>
-              <span className={`px-2 py-0.5 rounded-full text-xs font-mono font-bold ${
+              <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${
                 subTab === "contracts" ? "bg-white/20 text-white" : "bg-slate-200 text-slate-700"
               }`}>
                 {contracts.length}
@@ -140,7 +140,7 @@ export function EngagementsWorkspace({
                 <Sparkles className={`h-4 w-4 ${subTab === "postings" ? "text-brand" : "text-slate-400"}`} />
               )}
               <span>{isClient ? "My RFPs" : "Published Services"}</span>
-              <span className={`px-2 py-0.5 rounded-full text-xs font-mono font-bold ${
+              <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${
                 subTab === "postings" ? "bg-white/20 text-white" : "bg-slate-200 text-slate-700"
               }`}>
                 {postingsCount}
@@ -161,7 +161,7 @@ export function EngagementsWorkspace({
             >
               <FileText className={`h-4 w-4 ${subTab === "proposals" ? "text-brand" : "text-slate-400"}`} />
               <span>{isClient ? "Applicant Bids" : "Submitted Bids"}</span>
-              <span className={`px-2 py-0.5 rounded-full text-xs font-mono font-bold ${
+              <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${
                 subTab === "proposals" ? "bg-white/20 text-white" : "bg-slate-200 text-slate-700"
               }`}>
                 {proposals.length}

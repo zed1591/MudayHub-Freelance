@@ -8,11 +8,13 @@ import {
   SlidersHorizontal,
   Maximize2,
   Minimize2,
+  ShieldCheck,
 } from "lucide-react";
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
 import { OverviewTab } from "@/components/dashboard/OverviewTab";
 import { EngagementsWorkspace, type EngagementsSubTab } from "@/components/dashboard/EngagementsWorkspace";
 import { SettingsTab } from "@/components/dashboard/SettingsTab";
+import { useLanguage } from "@/components/LanguageProvider";
 import type { Contract, Gig, Job, Profile, Proposal } from "@/lib/types";
 
 type DashboardTab = "overview" | "engagements" | "settings";
@@ -26,6 +28,8 @@ interface TalentItem {
 
 export default function DashboardPage() {
   const router = useRouter();
+  const { language } = useLanguage();
+  const isAm = language === "am";
   const [profile, setProfile] = useState<Profile | null>(null);
   const [contracts, setContracts] = useState<Contract[]>([]);
   const [proposals, setProposals] = useState<Proposal[]>([]);
@@ -185,18 +189,20 @@ export default function DashboardPage() {
   const tabsConfig = [
     {
       id: "overview" as DashboardTab,
-      label: "Command Center",
+      label: isAm ? "ዋና ማዕከል" : "Command Center",
       icon: LayoutDashboard,
     },
     {
       id: "engagements" as DashboardTab,
-      label: "Engagements & Deals",
+      label: isAm ? "ስራዎች እና ጨረታዎች" : "Engagements & Deals",
       icon: FileCheck2,
       count: totalEngagementsCount,
     },
     {
       id: "settings" as DashboardTab,
-      label: isClient ? "Organization & Rails" : "Telebirr Payout & Profile",
+      label: isClient
+        ? (isAm ? "ድርጅት እና ክፍያዎች" : "Organization & Rails")
+        : (isAm ? "የቴሌብር አካውንት እና ፕሮፋይል" : "Telebirr Payout & Profile"),
       icon: SlidersHorizontal,
     },
   ];
@@ -219,118 +225,137 @@ export default function DashboardPage() {
         onRoleSwitch={handleRoleSwitch}
       />
 
-      {/* Prominent Workspace Navigation Tabs */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-3">
-        <nav
-          className="inline-flex items-center gap-1.5 rounded-2xl border border-slate-200 bg-white p-1.5 shadow-sm overflow-x-auto scrollbar-none w-full md:w-auto"
-          aria-label="Dashboard Workspace Tabs"
-        >
-          {tabsConfig.map((tab) => {
-            const Icon = tab.icon;
-            const isActive = activeTab === tab.id;
-            return (
+      {/* 2-Column Dashboard Workspace with Vertical Tabs Navigation */}
+      <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 items-start">
+        {/* Left Column: Vertical Tabs Navigation Sidebar */}
+        <aside className="w-full lg:col-span-3 lg:sticky lg:top-20 space-y-4">
+          <div className="card-surface rounded-2xl border border-slate-200/90 bg-white p-2.5 sm:p-3 shadow-sm space-y-1">
+            <div className="flex items-center justify-between px-3 py-2 text-xs font-bold uppercase tracking-wider text-slate-500 border-b border-slate-100 mb-1">
+              <span>{isAm ? "የስራ ክፍል ማውጫ" : "Workspace Tabs"}</span>
               <button
-                key={tab.id}
                 type="button"
-                onClick={() => setActiveTab(tab.id)}
-                className={`group flex items-center gap-2.5 whitespace-nowrap rounded-xl px-5 py-3 text-sm sm:text-base font-bold transition-all shrink-0 cursor-pointer ${
-                  isActive
-                    ? "bg-slate-900 text-white shadow-md"
-                    : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
-                }`}
+                onClick={() => setIsFullScreen((prev) => !prev)}
+                className="text-slate-400 hover:text-slate-700 transition cursor-pointer p-1 rounded-lg hover:bg-slate-100"
+                title={isFullScreen ? "Compact View" : "Fullscreen Workspace"}
+                aria-label={isFullScreen ? "Compact View" : "Fullscreen Workspace"}
               >
-                <Icon
-                  className={`h-5 w-5 transition ${
-                    isActive ? "text-brand" : "text-slate-400 group-hover:text-slate-700"
-                  }`}
-                />
-                <span>{tab.label}</span>
-                {typeof tab.count === "number" && (
-                  <span
-                    className={`ml-1.5 rounded-full px-2.5 py-0.5 text-xs font-mono font-bold ${
-                      isActive
-                        ? "bg-brand text-white"
-                        : "bg-slate-100 text-slate-700 border border-slate-200"
-                    }`}
-                  >
-                    {tab.count}
-                  </span>
+                {isFullScreen ? (
+                  <Minimize2 className="h-4 w-4" />
+                ) : (
+                  <Maximize2 className="h-4 w-4" />
                 )}
               </button>
-            );
-          })}
-        </nav>
+            </div>
 
-        {/* Workspace Fullscreen Toggle Button */}
-        <button
-          type="button"
-          onClick={() => setIsFullScreen((prev) => !prev)}
-          className="btn-secondary !py-2.5 !px-4 !text-xs font-bold flex items-center gap-2 self-end md:self-auto cursor-pointer hover:border-slate-400 shadow-sm rounded-xl"
-          title={isFullScreen ? "Exit Fullscreen Workspace" : "Maximize Fullscreen Workspace"}
-        >
-          {isFullScreen ? (
-            <>
-              <Minimize2 className="h-4 w-4 text-slate-600" />
-              <span>Compact View</span>
-            </>
-          ) : (
-            <>
-              <Maximize2 className="h-4 w-4 text-slate-600" />
-              <span>Full Screen Workspace</span>
-            </>
+            <nav className="flex flex-col gap-1.5" aria-label="Dashboard Workspace Tabs">
+              {tabsConfig.map((tab) => {
+                const Icon = tab.icon;
+                const isActive = activeTab === tab.id;
+                return (
+                  <button
+                    key={tab.id}
+                    type="button"
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`group flex w-full items-center justify-between gap-3 rounded-xl px-4 py-3 text-sm font-bold transition-all text-left cursor-pointer ${
+                      isActive
+                        ? "bg-slate-900 text-white shadow-sm"
+                        : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                    }`}
+                  >
+                    <div className="flex items-center gap-3 min-w-0">
+                      <Icon
+                        className={`h-5 w-5 shrink-0 transition ${
+                          isActive ? "text-brand" : "text-slate-400 group-hover:text-slate-700"
+                        }`}
+                      />
+                      <span className="truncate">{tab.label}</span>
+                    </div>
+                    {typeof tab.count === "number" && (
+                      <span
+                        className={`shrink-0 rounded-full px-2 py-0.5 text-xs font-bold ${
+                          isActive
+                            ? "bg-brand text-white"
+                            : "bg-slate-100 text-slate-700 border border-slate-200"
+                        }`}
+                      >
+                        {tab.count}
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </nav>
+          </div>
+
+          {/* Quick Platform Security & Rails Snapshot */}
+          <div className="hidden lg:block card-surface rounded-2xl border border-slate-200/90 bg-white p-4 shadow-sm space-y-3">
+            <div className="flex items-center justify-between text-xs font-bold text-slate-800">
+              <span className="flex items-center gap-1.5 text-slate-700">
+                <ShieldCheck className="h-4 w-4 text-emerald-600" />
+                <span>{isAm ? "የክፍያ ዋስትና" : "Escrow Trust Rail"}</span>
+              </span>
+              <span className="text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200 text-xs">
+                {isAm ? "ንቁ" : "Active"}
+              </span>
+            </div>
+            <p className="text-xs text-slate-500 leading-relaxed">
+              {isAm
+                ? "በቴሌብር እና በኢትዮጵያ ንግድ ባንክ በኩል በደረጃ የሚለቀቅ አስተማማኝ የክፍያ ዋስትና።"
+                : "Programmatic milestone releases to Telebirr and CBE accounts with cryptographic SHA-256 deed generation."}
+            </p>
+          </div>
+        </aside>
+
+        {/* Right Column: Tab Panels Content Area */}
+        <div className="w-full lg:col-span-9 min-w-0">
+          {activeTab === "overview" && (
+            <OverviewTab
+              isClient={isClient}
+              isFreelancer={isFreelancer}
+              isAdmin={isAdmin}
+              earnedOrSpentEtb={earnedOrSpentEtb}
+              totalEscrowVolume={totalEscrowVolume}
+              activeContracts={activeContracts}
+              contracts={contracts}
+              proposals={proposals}
+              myJobs={myJobs}
+              myGigs={myGigs}
+              recommendedJobs={recommendedJobs}
+              recommendedTalent={recommendedTalent}
+              recommendedGigs={recommendedGigs}
+              onOpenEngagements={(sub) => {
+                setActiveTab("engagements");
+                setEngagementsSubTab(sub);
+              }}
+              onOpenContracts={() => {
+                setActiveTab("engagements");
+                setEngagementsSubTab("contracts");
+              }}
+            />
           )}
-        </button>
-      </div>
 
-      {/* Tab Panels */}
-      <div className="w-full">
-        {activeTab === "overview" && (
-          <OverviewTab
-            isClient={isClient}
-            isFreelancer={isFreelancer}
-            isAdmin={isAdmin}
-            earnedOrSpentEtb={earnedOrSpentEtb}
-            totalEscrowVolume={totalEscrowVolume}
-            activeContracts={activeContracts}
-            contracts={contracts}
-            proposals={proposals}
-            myJobs={myJobs}
-            myGigs={myGigs}
-            recommendedJobs={recommendedJobs}
-            recommendedTalent={recommendedTalent}
-            recommendedGigs={recommendedGigs}
-            onOpenEngagements={(sub) => {
-              setActiveTab("engagements");
-              setEngagementsSubTab(sub);
-            }}
-            onOpenContracts={() => {
-              setActiveTab("engagements");
-              setEngagementsSubTab("contracts");
-            }}
-          />
-        )}
+          {activeTab === "engagements" && (
+            <EngagementsWorkspace
+              isClient={isClient}
+              contracts={contracts}
+              myJobs={myJobs}
+              myGigs={myGigs}
+              proposals={proposals}
+              initialSubTab={engagementsSubTab}
+              isFullScreen={isFullScreen}
+              onToggleFullScreen={() => setIsFullScreen((prev) => !prev)}
+            />
+          )}
 
-        {activeTab === "engagements" && (
-          <EngagementsWorkspace
-            isClient={isClient}
-            contracts={contracts}
-            myJobs={myJobs}
-            myGigs={myGigs}
-            proposals={proposals}
-            initialSubTab={engagementsSubTab}
-            isFullScreen={isFullScreen}
-            onToggleFullScreen={() => setIsFullScreen((prev) => !prev)}
-          />
-        )}
-
-        {activeTab === "settings" && (
-          <SettingsTab
-            profile={profile}
-            isClient={isClient}
-            onSaved={(updated) => setProfile(updated)}
-            onRoleSwitch={handleRoleSwitch}
-          />
-        )}
+          {activeTab === "settings" && (
+            <SettingsTab
+              profile={profile}
+              isClient={isClient}
+              onSaved={(updated) => setProfile(updated)}
+              onRoleSwitch={handleRoleSwitch}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

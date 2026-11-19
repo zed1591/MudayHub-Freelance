@@ -200,7 +200,7 @@ export function Sidebar({ onNavigate, className }: SidebarProps) {
                 Muday<span className="text-brand">Hub</span>
               </span>
             </div>
-            <p className="text-[10px] font-bold text-slate-500 font-mono tracking-wider uppercase">
+            <p className="text-[11px] font-bold text-slate-500 tracking-wider uppercase">
               {language === "am" ? "የሙዳይ ፍሪላንስ" : "FREELANCE WORKSPACE"}
             </p>
           </div>

@@ -28,7 +28,7 @@ export function Footer() {
               <span className="text-base font-black tracking-tight text-slate-900">
                 Muday<span className="text-brand">Hub</span>
               </span>
-              <span className="text-xs font-bold text-slate-400 font-mono uppercase">
+              <span className="text-[11px] font-bold text-slate-400 tracking-wider uppercase">
                 {language === "am" ? "የሙዳይ ፍሪላንስ" : "Freelance"}
               </span>
             </Link>

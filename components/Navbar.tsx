@@ -99,7 +99,7 @@ export function Navbar({ isWorkspace = false }: NavbarProps) {
                   <span className="text-base font-black text-slate-900 tracking-tight leading-none">
                     Muday<span className="text-brand">Hub</span>
                   </span>
-                  <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider font-mono">
+                  <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
                     Freelance
                   </span>
                 </div>

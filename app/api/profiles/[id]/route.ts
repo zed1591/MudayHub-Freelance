@@ -74,6 +74,22 @@ export async function GET(
       }
     }
 
+    // 3. Third attempt: If viewing own profile, use session profile directly
+    if (!rawProfile && currentUser && currentUser.id === id) {
+      rawProfile = currentUser.profile;
+    }
+
+    // 4. Fourth attempt: Check demo store fallback
+    if (!rawProfile) {
+      try {
+        const store = readStore();
+        const demoUser = store.users.find((u) => u.id === id);
+        if (demoUser) rawProfile = demoUser.profile;
+      } catch {
+        /* ignore */
+      }
+    }
+
     if (!rawProfile) {
       return NextResponse.json({ error: "Profile not found" }, { status: 404 });
     }

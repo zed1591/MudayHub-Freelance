@@ -107,15 +107,15 @@ export function EngagementsWorkspace({
                 setSubTab("contracts");
                 setStatusFilter("all");
               }}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-bold transition-all shrink-0 ${
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all shrink-0 cursor-pointer ${
                 subTab === "contracts"
                   ? "bg-slate-900 text-white shadow-sm"
                   : "text-slate-600 hover:text-slate-900 hover:bg-slate-200/60"
               }`}
             >
-              <FileCheck2 className={`h-3.5 w-3.5 ${subTab === "contracts" ? "text-rose-400" : "text-slate-400"}`} />
+              <FileCheck2 className={`h-4 w-4 ${subTab === "contracts" ? "text-brand" : "text-slate-400"}`} />
               <span>Escrow Contracts</span>
-              <span className={`px-1.5 py-0.2 rounded-full text-[10px] font-mono ${
+              <span className={`px-2 py-0.5 rounded-full text-xs font-mono font-bold ${
                 subTab === "contracts" ? "bg-white/20 text-white" : "bg-slate-200 text-slate-700"
               }`}>
                 {contracts.length}
@@ -128,19 +128,19 @@ export function EngagementsWorkspace({
                 setSubTab("postings");
                 setStatusFilter("all");
               }}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-bold transition-all shrink-0 ${
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all shrink-0 cursor-pointer ${
                 subTab === "postings"
                   ? "bg-slate-900 text-white shadow-sm"
                   : "text-slate-600 hover:text-slate-900 hover:bg-slate-200/60"
               }`}
             >
               {isClient ? (
-                <Briefcase className={`h-3.5 w-3.5 ${subTab === "postings" ? "text-rose-400" : "text-slate-400"}`} />
+                <Briefcase className={`h-4 w-4 ${subTab === "postings" ? "text-brand" : "text-slate-400"}`} />
               ) : (
-                <Sparkles className={`h-3.5 w-3.5 ${subTab === "postings" ? "text-rose-400" : "text-slate-400"}`} />
+                <Sparkles className={`h-4 w-4 ${subTab === "postings" ? "text-brand" : "text-slate-400"}`} />
               )}
               <span>{isClient ? "My RFPs" : "Published Services"}</span>
-              <span className={`px-1.5 py-0.2 rounded-full text-[10px] font-mono ${
+              <span className={`px-2 py-0.5 rounded-full text-xs font-mono font-bold ${
                 subTab === "postings" ? "bg-white/20 text-white" : "bg-slate-200 text-slate-700"
               }`}>
                 {postingsCount}
@@ -153,15 +153,15 @@ export function EngagementsWorkspace({
                 setSubTab("proposals");
                 setStatusFilter("all");
               }}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-bold transition-all shrink-0 ${
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all shrink-0 cursor-pointer ${
                 subTab === "proposals"
                   ? "bg-slate-900 text-white shadow-sm"
                   : "text-slate-600 hover:text-slate-900 hover:bg-slate-200/60"
               }`}
             >
-              <FileText className={`h-3.5 w-3.5 ${subTab === "proposals" ? "text-rose-400" : "text-slate-400"}`} />
+              <FileText className={`h-4 w-4 ${subTab === "proposals" ? "text-brand" : "text-slate-400"}`} />
               <span>{isClient ? "Applicant Bids" : "Submitted Bids"}</span>
-              <span className={`px-1.5 py-0.2 rounded-full text-[10px] font-mono ${
+              <span className={`px-2 py-0.5 rounded-full text-xs font-mono font-bold ${
                 subTab === "proposals" ? "bg-white/20 text-white" : "bg-slate-200 text-slate-700"
               }`}>
                 {proposals.length}

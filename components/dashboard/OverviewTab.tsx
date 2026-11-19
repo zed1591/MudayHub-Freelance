@@ -226,13 +226,13 @@ export function OverviewTab({
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5">
         {/* Card 1: Settlement Volume */}
         <div className="card-surface relative overflow-hidden rounded-2xl p-4 sm:p-5 border border-slate-200/90 bg-white shadow-sm flex flex-col justify-between">
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#C8102E] to-rose-500" />
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand to-terracotta" />
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
               {isClient ? "Escrow Capital Funded" : "Net Earnings Disbursed"}
             </span>
-            <span className="rounded-full bg-rose-50 px-2 py-0.5 text-[9px] font-bold text-[#C8102E] border border-rose-200">
-              100% ETB
+            <span className="rounded-full bg-amber-50 px-2 py-0.5 text-[9px] font-bold text-brand border border-brand/20">
+              {earnedOrSpentEtb > 0 ? "Active Capital" : "Vault Protected"}
             </span>
           </div>
           <div className="my-2.5">

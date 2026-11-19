@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { calculateProfileStrength } from "@/lib/profile-strength";
 import { 
   ShieldCheck, 
   FolderGit2, 
@@ -72,8 +73,25 @@ export function SettingsTab({
   const [education, setEducation] = useState<EducationItem[]>(profile?.education || []);
   const [certifications, setCertifications] = useState<CertificationItem[]>(profile?.certifications || []);
 
-  // Payment & Payout Methods
-  const [paymentMethods, setPaymentMethods] = useState<PaymentMethodItem[]>(profile?.payment_methods || []);
+  // Payment & Payout Methods (automatically integrates primary Telebirr number if present)
+  const [paymentMethods, setPaymentMethods] = useState<PaymentMethodItem[]>(() => {
+    if (profile?.payment_methods && profile.payment_methods.length > 0) {
+      return profile.payment_methods;
+    }
+    if (profile?.telebirr_number) {
+      return [
+        {
+          id: "pm-telebirr-primary",
+          type: "telebirr" as PaymentMethodType,
+          title: "Primary Telebirr Wallet",
+          account_identifier: profile.telebirr_number,
+          is_default: true,
+          created_at: profile.created_at || new Date().toISOString(),
+        },
+      ];
+    }
+    return [];
+  });
   const [showAddPayment, setShowAddPayment] = useState(false);
   const [pmType, setPmType] = useState<PaymentMethodType>("telebirr");
   const [pmIdentifier, setPmIdentifier] = useState("");
@@ -117,21 +135,24 @@ export function SettingsTab({
   const [message, setMessage] = useState("");
   const [isError, setIsError] = useState(false);
 
-  // Profile strength calculation
-  const strengthPoints = [
-    Boolean(avatarUrl.trim()),
-    Boolean(headline.trim()),
-    Boolean(bio.trim() && bio.length > 20),
-    Boolean(skills.trim()),
-    Boolean(phone.trim()),
-    Boolean(githubUrl.trim() || portfolioUrl.trim() || linkedinUrl.trim()),
-    pastProjects.length > 0,
-    education.length > 0 || certifications.length > 0,
-    paymentMethods.length > 0,
-  ];
-  const strengthPercent = Math.round(
-    (strengthPoints.filter(Boolean).length / strengthPoints.length) * 100
-  );
+  // Unified profile strength calculation
+  const strengthPercent = calculateProfileStrength({
+    role: profile?.role,
+    fullName,
+    headline,
+    bio,
+    skills,
+    phone,
+    telebirr,
+    avatarUrl,
+    githubUrl,
+    portfolioUrl,
+    linkedinUrl,
+    pastProjects,
+    education,
+    certifications,
+    paymentMethods,
+  });
 
   async function handleAvatarUpload(file: File) {
     setUploadingAvatar(true);

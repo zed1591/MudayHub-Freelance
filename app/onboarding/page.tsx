@@ -23,6 +23,7 @@ import {
   X,
 } from "lucide-react";
 import { useSession } from "@/components/SessionProvider";
+import { calculateProfileStrength } from "@/lib/profile-strength";
 import { 
   JOB_CATEGORIES, 
   GIG_CATEGORIES, 
@@ -140,25 +141,23 @@ export default function OnboardingPage() {
 
   const isFreelancer = user.role === "freelancer";
 
-  // Profile strength calculation
-  const strengthPoints = isFreelancer
-    ? [
-        Boolean(headline.trim()),
-        Boolean(bio.trim() && bio.length >= 20),
-        selectedCategories.length > 0,
-        Boolean(githubUrl.trim() || portfolioUrl.trim() || linkedinUrl.trim()),
-        pastProjects.length > 0,
-        education.length > 0 || certifications.length > 0,
-        Boolean(telebirr.trim() || phone.trim()),
-      ]
-    : [
-        Boolean(bio.trim() && bio.length >= 20),
-        selectedCategories.length > 0,
-        Boolean(phone.trim()),
-      ];
-  const strengthPercent = Math.round(
-    (strengthPoints.filter(Boolean).length / strengthPoints.length) * 100
-  );
+  // Unified profile strength calculation
+  const strengthPercent = calculateProfileStrength({
+    role: user.role,
+    fullName: user.full_name,
+    headline,
+    bio,
+    skills: selectedCategories,
+    phone,
+    telebirr,
+    avatarUrl,
+    githubUrl,
+    portfolioUrl,
+    linkedinUrl,
+    pastProjects,
+    education,
+    certifications,
+  });
 
   async function handleToggleRole() {
     setSwitchingRole(true);

@@ -121,6 +121,11 @@ export function DashboardHeader({
                   <Smartphone className="h-3 w-3 text-emerald-600" />
                   <span>Telebirr: {profile.telebirr_number}</span>
                 </span>
+              ) : isClient ? (
+                <span className="inline-flex items-center gap-1 font-mono text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
+                  <ShieldCheck className="h-3 w-3 text-emerald-600" />
+                  <span>Direct Escrow Active</span>
+                </span>
               ) : (
                 <span className="inline-flex items-center gap-1 font-mono text-amber-700 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200">
                   <Wallet className="h-3 w-3 text-amber-600" />

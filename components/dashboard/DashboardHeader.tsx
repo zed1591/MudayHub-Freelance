@@ -21,6 +21,7 @@ interface Props {
   profile: Profile;
   isClient: boolean;
   isFreelancer: boolean;
+  isAdmin?: boolean;
   isFullScreen?: boolean;
   onToggleFullScreen?: () => void;
   onRoleSwitch?: () => Promise<void>;
@@ -30,6 +31,7 @@ export function DashboardHeader({
   profile,
   isClient,
   isFreelancer,
+  isAdmin,
   isFullScreen,
   onToggleFullScreen,
   onRoleSwitch,
@@ -173,7 +175,24 @@ export function DashboardHeader({
             </button>
           )}
 
-          {isClient ? (
+          {isAdmin ? (
+            <>
+              <Link
+                href="/admin/disputes"
+                className="btn-c2sa !py-2 !px-4 !text-xs font-bold flex items-center gap-1.5"
+              >
+                <ShieldCheck className="h-4 w-4" />
+                <span>Dispute Center</span>
+              </Link>
+              <Link
+                href="/jobs/new"
+                className="btn-secondary !py-2 !px-3 !text-xs font-bold flex items-center gap-1.5"
+              >
+                <Plus className="h-3.5 w-3.5 text-brand" />
+                <span>Post RFP</span>
+              </Link>
+            </>
+          ) : isClient ? (
             <Link
               href="/jobs/new"
               className="btn-c2sa !py-2 !px-4 !text-xs font-bold flex items-center gap-1.5"

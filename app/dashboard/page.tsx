@@ -107,6 +107,7 @@ export default function DashboardPage() {
 
   const isClient = profile?.role === "client";
   const isFreelancer = profile?.role === "freelancer";
+  const isAdmin = profile?.role === "admin";
 
   const activeContracts = useMemo(
     () => contracts.filter((c) => c.escrow_status === "funded" || c.escrow_status === "work_submitted"),
@@ -222,6 +223,7 @@ export default function DashboardPage() {
         profile={profile}
         isClient={isClient}
         isFreelancer={isFreelancer}
+        isAdmin={isAdmin}
         isFullScreen={isFullScreen}
         onToggleFullScreen={() => setIsFullScreen((prev) => !prev)}
         onRoleSwitch={handleRoleSwitch}
@@ -296,6 +298,7 @@ export default function DashboardPage() {
           <OverviewTab
             isClient={isClient}
             isFreelancer={isFreelancer}
+            isAdmin={isAdmin}
             earnedOrSpentEtb={earnedOrSpentEtb}
             totalEscrowVolume={totalEscrowVolume}
             activeContracts={activeContracts}

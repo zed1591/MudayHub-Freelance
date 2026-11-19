@@ -28,6 +28,7 @@ interface TalentItem {
 interface Props {
   isClient: boolean;
   isFreelancer: boolean;
+  isAdmin?: boolean;
   earnedOrSpentEtb: number;
   totalEscrowVolume: number;
   activeContracts: Contract[];
@@ -45,6 +46,7 @@ interface Props {
 export function OverviewTab({
   isClient,
   isFreelancer,
+  isAdmin,
   earnedOrSpentEtb,
   totalEscrowVolume,
   activeContracts,
@@ -64,13 +66,64 @@ export function OverviewTab({
     <div className="space-y-6">
       {/* Tactical Quick Action Launcher */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        {isClient ? (
+        {isAdmin ? (
+          <>
+            <Link
+              href="/admin/disputes"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
+            >
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-50 text-brand group-hover:bg-brand group-hover:text-white transition shrink-0">
+                <ShieldCheck className="h-4 w-4" />
+              </div>
+              <div className="min-w-0">
+                <p className="text-xs font-bold text-slate-900 truncate">Dispute Center</p>
+                <p className="text-[10px] text-slate-500 truncate">Arbitrate escrow</p>
+              </div>
+            </Link>
+            <Link
+              href="/contracts"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
+            >
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition shrink-0">
+                <FileCheck2 className="h-4 w-4" />
+              </div>
+              <div className="min-w-0">
+                <p className="text-xs font-bold text-slate-900 truncate">All Contracts</p>
+                <p className="text-[10px] text-slate-500 truncate">Platform escrows</p>
+              </div>
+            </Link>
+            <Link
+              href="/jobs/new"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
+            >
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-amber-700 group-hover:bg-brand group-hover:text-white transition shrink-0">
+                <Plus className="h-4 w-4" />
+              </div>
+              <div className="min-w-0">
+                <p className="text-xs font-bold text-slate-900 truncate">Post Project</p>
+                <p className="text-[10px] text-slate-500 truncate">Create project RFP</p>
+              </div>
+            </Link>
+            <Link
+              href="/talent"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
+            >
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-50 text-purple-700 group-hover:bg-purple-600 group-hover:text-white transition shrink-0">
+                <Users className="h-4 w-4" />
+              </div>
+              <div className="min-w-0">
+                <p className="text-xs font-bold text-slate-900 truncate">Talent Directory</p>
+                <p className="text-[10px] text-slate-500 truncate">Browse specialists</p>
+              </div>
+            </Link>
+          </>
+        ) : isClient ? (
           <>
             <Link
               href="/jobs/new"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-[#C8102E]/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-rose-50 text-[#C8102E] group-hover:bg-[#C8102E] group-hover:text-white transition shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-50 text-brand group-hover:bg-brand group-hover:text-white transition shrink-0">
                 <Plus className="h-4 w-4" />
               </div>
               <div className="min-w-0">
@@ -80,7 +133,7 @@ export function OverviewTab({
             </Link>
             <Link
               href="/talent"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-[#C8102E]/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
             >
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition shrink-0">
                 <Users className="h-4 w-4" />
@@ -92,9 +145,9 @@ export function OverviewTab({
             </Link>
             <Link
               href="/gigs"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-[#C8102E]/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-amber-700 group-hover:bg-[#C8102E] group-hover:text-white transition shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-amber-700 group-hover:bg-brand group-hover:text-white transition shrink-0">
                 <Sparkles className="h-4 w-4" />
               </div>
               <div className="min-w-0">
@@ -104,7 +157,7 @@ export function OverviewTab({
             </Link>
             <Link
               href="/verify"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-[#C8102E]/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
             >
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-50 text-purple-700 group-hover:bg-purple-600 group-hover:text-white transition shrink-0">
                 <ShieldCheck className="h-4 w-4" />
@@ -119,9 +172,9 @@ export function OverviewTab({
           <>
             <Link
               href="/gigs/new"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-[#C8102E]/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-rose-50 text-[#C8102E] group-hover:bg-[#C8102E] group-hover:text-white transition shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-50 text-brand group-hover:bg-brand group-hover:text-white transition shrink-0">
                 <Plus className="h-4 w-4" />
               </div>
               <div className="min-w-0">
@@ -131,7 +184,7 @@ export function OverviewTab({
             </Link>
             <Link
               href="/jobs"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-[#C8102E]/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
             >
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition shrink-0">
                 <Briefcase className="h-4 w-4" />
@@ -143,26 +196,26 @@ export function OverviewTab({
             </Link>
             <Link
               href="/escrow"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-[#C8102E]/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-amber-700 group-hover:bg-[#C8102E] group-hover:text-white transition shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-amber-700 group-hover:bg-brand group-hover:text-white transition shrink-0">
                 <Wallet className="h-4 w-4" />
               </div>
               <div className="min-w-0">
-                <p className="text-xs font-bold text-slate-900 truncate">Escrow Simulator</p>
-                <p className="text-[10px] text-slate-500 truncate">ETB calculator</p>
+                <p className="text-xs font-bold text-slate-900 truncate">Protected Escrow</p>
+                <p className="text-[10px] text-slate-500 truncate">Status ledger</p>
               </div>
             </Link>
             <Link
               href="/verify"
-              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-[#C8102E]/40 transition shadow-sm flex items-center gap-3 group bg-white"
+              className="card-surface p-3.5 rounded-2xl border border-slate-200/90 hover:border-brand/40 transition shadow-sm flex items-center gap-3 group bg-white"
             >
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-50 text-purple-700 group-hover:bg-purple-600 group-hover:text-white transition shrink-0">
                 <ShieldCheck className="h-4 w-4" />
               </div>
               <div className="min-w-0">
-                <p className="text-xs font-bold text-slate-900 truncate">Trust Deeds</p>
-                <p className="text-[10px] text-slate-500 truncate">Cryptographic seals</p>
+                <p className="text-xs font-bold text-slate-900 truncate">Verify Deeds</p>
+                <p className="text-[10px] text-slate-500 truncate">SHA-256 seal</p>
               </div>
             </Link>
           </>

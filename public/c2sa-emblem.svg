@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="120 70 620 290" width="100%" height="100%">
+  <defs>
+    <linearGradient id="c2saGradEmb" x1="0%" y1="85%" x2="95%" y2="10%">
+      <stop offset="0%" stop-color="#232D3F" />
+      <stop offset="40%" stop-color="#2E384D" />
+      <stop offset="70%" stop-color="#8E1437" />
+      <stop offset="100%" stop-color="#C8102E" />
+    </linearGradient>
+
+    <linearGradient id="saGradEmb" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#C8102E" />
+      <stop offset="45%" stop-color="#8E1437" />
+      <stop offset="100%" stop-color="#232D3F" />
+    </linearGradient>
+
+    <filter id="cortexGlowEmb" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      .sup-two-emb {
+        font-family: 'Orbitron', 'Rajdhani', 'Segoe UI', sans-serif;
+        font-size: 92px;
+        font-weight: 800;
+        fill: url(#saGradEmb);
+      }
+    </style>
+  </defs>
+
+  <!-- C (Cyber + Cloud) -->
+  <g id="cyber-c">
+    <path d="M 308 128 A 135 135 0 1 0 318 338 L 348 310" fill="none" stroke="url(#c2saGradEmb)" stroke-width="26" stroke-linecap="round" />
+    <path d="M 288 148 A 104 104 0 0 0 146 210" fill="none" stroke="url(#c2saGradEmb)" stroke-width="16" stroke-linecap="butt" />
+    <path d="M 146 245 A 104 104 0 0 0 292 318" fill="none" stroke="#232D3F" stroke-width="18" stroke-linecap="butt" />
+    <path d="M 272 170 A 78 78 0 0 0 172 215" fill="none" stroke="url(#c2saGradEmb)" stroke-width="12" />
+    <path d="M 172 248 A 78 78 0 0 0 275 295" fill="none" stroke="#232D3F" stroke-width="14" />
+    <g stroke="#232D3F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M 155 226 H 184 L 194 214" />
+      <path d="M 155 234 H 184 L 194 246" />
+      <circle cx="197" cy="211" r="4" fill="#fff" />
+      <circle cx="197" cy="249" r="4" fill="#fff" />
+    </g>
+    <path d="M 295 190 C 325 182, 345 202, 340 222 C 368 222, 382 248, 372 272 C 366 286, 350 295, 330 295" fill="none" stroke="url(#c2saGradEmb)" stroke-width="8" stroke-linecap="round" />
+  </g>
+
+  <!-- Superscript 2 -->
+  <text x="312" y="168" class="sup-two-emb">2</text>
+
+  <!-- S (Software) -->
+  <g id="software-s" fill="none" stroke="url(#saGradEmb)" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M 318 338 L 355 302 H 475 C 510 302, 515 250, 475 250 H 435 C 375 250, 375 112, 450 112 H 555 L 532 138 H 450 C 405 138, 405 222, 445 222 H 478 C 548 222, 548 338, 475 338 H 342 L 360 320 H 475" stroke-width="8" />
+    <path d="M 520 125 H 448 C 392 125, 392 236, 442 236 H 478 C 530 236, 530 320, 475 320" stroke-width="5" />
+  </g>
+
+  <!-- A (AI Cortex) -->
+  <g id="ai-a">
+    <path d="M 552 332 L 618 145 C 625 126, 645 126, 652 145 L 718 332 A 16 16 0 0 1 688 342 L 670 290 H 600 L 582 342 A 16 16 0 0 1 552 332 Z" fill="none" stroke="url(#saGradEmb)" stroke-width="9" stroke-linejoin="round" />
+    <path d="M 608 262 L 635 182 L 662 262 Z" fill="none" stroke="url(#saGradEmb)" stroke-width="8" stroke-linejoin="round" />
+    <path d="M 567 332 L 605 222 M 703 332 L 665 222" fill="none" stroke="url(#saGradEmb)" stroke-width="5" stroke-linecap="round" />
+    <g filter="url(#cortexGlowEmb)" stroke="#C8102E" stroke-width="4.5" stroke-linecap="round">
+      <line x1="635" y1="125" x2="635" y2="96" />
+      <line x1="635" y1="125" x2="598" y2="112" />
+      <line x1="635" y1="125" x2="672" y2="112" />
+      <line x1="635" y1="125" x2="582" y2="145" />
+      <line x1="635" y1="125" x2="688" y2="145" />
+      <line x1="635" y1="125" x2="610" y2="162" />
+      <line x1="635" y1="125" x2="660" y2="162" />
+      <line x1="598" y1="112" x2="582" y2="145" />
+      <line x1="672" y1="112" x2="688" y2="145" />
+      <line x1="582" y1="145" x2="572" y2="182" />
+      <line x1="688" y1="145" x2="698" y2="182" />
+      <line x1="610" y1="162" x2="592" y2="198" />
+      <line x1="660" y1="162" x2="678" y2="198" />
+      <circle cx="635" cy="125" r="8" fill="#C8102E" />
+      <circle cx="635" cy="96" r="6" fill="#C8102E" />
+      <circle cx="598" cy="112" r="5.5" fill="#fff" />
+      <circle cx="672" cy="112" r="5.5" fill="#C8102E" />
+      <circle cx="582" cy="145" r="5.5" fill="#C8102E" />
+      <circle cx="688" cy="145" r="5.5" fill="#C8102E" />
+      <circle cx="610" cy="162" r="5" fill="#fff" />
+      <circle cx="660" cy="162" r="6" fill="#C8102E" />
+      <circle cx="572" cy="182" r="5" fill="#fff" />
+      <circle cx="698" cy="182" r="5" fill="#fff" />
+      <circle cx="592" cy="198" r="4.5" fill="#fff" />
+      <circle cx="678" cy="198" r="4.5" fill="#fff" />
+    </g>
+  </g>
+</svg>

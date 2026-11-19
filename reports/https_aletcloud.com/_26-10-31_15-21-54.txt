@@ -1,0 +1,142 @@
+# Dirsearch started Sat Oct 31 15:36:50 2026 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u https://aletcloud.com
+
+200    23KB  https://aletcloud.com/404
+200    64KB  https://aletcloud.com/about
+301   162B   https://aletcloud.com/adm/index.html    -> REDIRECTS TO: /adm
+301   162B   https://aletcloud.com/admin/index.html    -> REDIRECTS TO: /admin
+301   162B   https://aletcloud.com/admin2/index.html    -> REDIRECTS TO: /admin2
+301   162B   https://aletcloud.com/admin_area/index.html    -> REDIRECTS TO: /admin_area
+301   162B   https://aletcloud.com/adminarea/index.html    -> REDIRECTS TO: /adminarea
+301   162B   https://aletcloud.com/admincp/index.html    -> REDIRECTS TO: /admincp
+301   162B   https://aletcloud.com/administrator/index.html    -> REDIRECTS TO: /administrator
+200    24KB  https://aletcloud.com/affiliate
+404   136B   https://aletcloud.com/api
+404   147B   https://aletcloud.com/api/2/explore/
+404   137B   https://aletcloud.com/api/
+404   155B   https://aletcloud.com/api/2/issue/createmeta
+404   147B   https://aletcloud.com/api/_swagger_/
+404   149B   https://aletcloud.com/api/__swagger__/
+404   140B   https://aletcloud.com/api/api
+404   145B   https://aletcloud.com/api/api-docs
+404   144B   https://aletcloud.com/api/apidocs
+404   157B   https://aletcloud.com/api/apidocs/swagger.json
+404   153B   https://aletcloud.com/api/application.wadl
+404   149B   https://aletcloud.com/api/cask/graphql
+404   143B   https://aletcloud.com/api/config
+404   142B   https://aletcloud.com/api/docs/
+404   146B   https://aletcloud.com/api/error_log
+404   147B   https://aletcloud.com/api/index.html
+404   143B   https://aletcloud.com/api/jsonws
+404   150B   https://aletcloud.com/api/jsonws/invoke
+404   147B   https://aletcloud.com/api/login.json
+404   168B   https://aletcloud.com/api/package_search/v4/documentation
+404   144B   https://aletcloud.com/api/profile
+404   146B   https://aletcloud.com/api/snapshots
+404   144B   https://aletcloud.com/api/swagger
+404   154B   https://aletcloud.com/api/spec/swagger.json
+404   152B   https://aletcloud.com/api/swagger-ui.html
+404   149B   https://aletcloud.com/api/swagger.json
+404   149B   https://aletcloud.com/api/swagger.yaml
+404   148B   https://aletcloud.com/api/swagger.yml
+404   142B   https://aletcloud.com/api/batch
+404   155B   https://aletcloud.com/api/swagger/index.html
+404   153B   https://aletcloud.com/api/swagger/ui/index
+404   149B   https://aletcloud.com/api/timelion/run
+404   152B   https://aletcloud.com/api/swagger/swagger
+404   162B   https://aletcloud.com/api/swagger/static/index.html
+404   141B   https://aletcloud.com/api/docs
+404   139B   https://aletcloud.com/api/v1
+404   140B   https://aletcloud.com/api/v1/
+404   152B   https://aletcloud.com/api/v1/swagger.json
+404   152B   https://aletcloud.com/api/v1/swagger.yaml
+404   139B   https://aletcloud.com/api/v2
+404   140B   https://aletcloud.com/api/v2/
+404   157B   https://aletcloud.com/api/v2/helpdesk/discover
+404   152B   https://aletcloud.com/api/v2/swagger.json
+404   152B   https://aletcloud.com/api/v2/swagger.yaml
+404   139B   https://aletcloud.com/api/v3
+404   139B   https://aletcloud.com/api/v4
+404   167B   https://aletcloud.com/api/vendor/phpunit/phpunit/phpunit
+404   142B   https://aletcloud.com/api/proxy
+404   143B   https://aletcloud.com/api/whoami
+404   144B   https://aletcloud.com/api/version
+301   162B   https://aletcloud.com/assets    -> REDIRECTS TO: /assets/
+200    24KB  https://aletcloud.com/assets/file
+403   548B   https://aletcloud.com/assets/
+200    24KB  https://aletcloud.com/assets/fckeditor
+200    24KB  https://aletcloud.com/assets/js/fckeditor
+200    24KB  https://aletcloud.com/assets/npm-debug.log
+200    24KB  https://aletcloud.com/assets/pubspec.yaml
+200    24KB  https://aletcloud.com/auth
+200    24KB  https://aletcloud.com/auth/
+200    24KB  https://aletcloud.com/auth/login.php
+200    24KB  https://aletcloud.com/auth/admin
+200    24KB  https://aletcloud.com/auth/login
+200    24KB  https://aletcloud.com/auth/login.js
+200    24KB  https://aletcloud.com/auth/logon
+200    24KB  https://aletcloud.com/auth/login.aspx
+200    24KB  https://aletcloud.com/auth/login.jsp
+200    24KB  https://aletcloud.com/auth/signin
+200    24KB  https://aletcloud.com/auth/adm
+200    24KB  https://aletcloud.com/auth/login.html
+301   162B   https://aletcloud.com/bb-admin/index.html    -> REDIRECTS TO: /bb-admin
+200    24KB  https://aletcloud.com/billing
+200    24KB  https://aletcloud.com/billing/
+200    24KB  https://aletcloud.com/billing/killer.php
+301   162B   https://aletcloud.com/cgi-bin/index.html    -> REDIRECTS TO: /cgi-bin
+404   548B   https://aletcloud.com/console/base/config.json
+404   548B   https://aletcloud.com/console/j_security_check
+404   548B   https://aletcloud.com/console/login/LoginForm.jsp
+301   162B   https://aletcloud.com/contact    -> REDIRECTS TO: /support
+404   548B   https://aletcloud.com/console/
+200    24KB  https://aletcloud.com/console
+404   548B   https://aletcloud.com/console/payments/config.json
+301   162B   https://aletcloud.com/core/latest/swagger-ui/index.html    -> REDIRECTS TO: /core/latest/swagger-ui
+200    24KB  https://aletcloud.com/dashboard
+200    24KB  https://aletcloud.com/dashboard/
+200    24KB  https://aletcloud.com/dashboard/howto.html
+200    24KB  https://aletcloud.com/dashboard/phpinfo.php
+200    24KB  https://aletcloud.com/dashboard/faq.html
+301   162B   https://aletcloud.com/demo/ejb/index.html    -> REDIRECTS TO: /demo/ejb
+301   162B   https://aletcloud.com/doc/html/index.html    -> REDIRECTS TO: /doc/html
+301   162B   https://aletcloud.com/docs/html/index.html    -> REDIRECTS TO: /docs/html
+200    42KB  https://aletcloud.com/docs
+301   162B   https://aletcloud.com/docs/html/admin/index.html    -> REDIRECTS TO: /docs/html/admin
+301   162B   https://aletcloud.com/druid/index.html    -> REDIRECTS TO: /druid
+200    24KB  https://aletcloud.com/email
+200    24KB  https://aletcloud.com/email/
+200    24KB  https://aletcloud.com/error
+200    24KB  https://aletcloud.com/error/
+200    24KB  https://aletcloud.com/error/error.log
+301   162B   https://aletcloud.com/examples/jsp/index.html    -> REDIRECTS TO: /examples/jsp
+301   162B   https://aletcloud.com/estore/index.html    -> REDIRECTS TO: /estore
+301   162B   https://aletcloud.com/examples/servlets/index.html    -> REDIRECTS TO: /examples/servlets
+200     9KB  https://aletcloud.com/favicon.ico
+301   162B   https://aletcloud.com/index.html    -> REDIRECTS TO: /
+403   633B   https://aletcloud.com/jenkins/
+403   645B   https://aletcloud.com/jenkins/script
+301   162B   https://aletcloud.com/legal    -> REDIRECTS TO: /legal/terms
+301   162B   https://aletcloud.com/logon/LogonPoint/index.html    -> REDIRECTS TO: /logon/LogonPoint
+301   162B   https://aletcloud.com/manual/index.html    -> REDIRECTS TO: /manual
+301   162B   https://aletcloud.com/mifs/user/index.html    -> REDIRECTS TO: /mifs/user
+301   162B   https://aletcloud.com/modelsearch/index.html    -> REDIRECTS TO: /modelsearch
+301   162B   https://aletcloud.com/panel-administracion/index.html    -> REDIRECTS TO: /panel-administracion
+301   162B   https://aletcloud.com/phpmyadmin/doc/html/index.html    -> REDIRECTS TO: /phpmyadmin/doc/html
+301   162B   https://aletcloud.com/phpmyadmin/docs/html/index.html    -> REDIRECTS TO: /phpmyadmin/docs/html
+301   162B   https://aletcloud.com/prod-api/druid/index.html    -> REDIRECTS TO: /prod-api/druid
+200   746B   https://aletcloud.com/robots.txt
+200    24KB  https://aletcloud.com/settings
+200    24KB  https://aletcloud.com/settings/
+301   162B   https://aletcloud.com/siteadmin/index.html    -> REDIRECTS TO: /siteadmin
+200     5KB  https://aletcloud.com/sitemap.xml
+200    24KB  https://aletcloud.com/storage
+200    24KB  https://aletcloud.com/storage/logs/laravel.log
+200    24KB  https://aletcloud.com/storage/
+301   162B   https://aletcloud.com/stzx_admin/index.html    -> REDIRECTS TO: /stzx_admin
+301   162B   https://aletcloud.com/swagger/index.html    -> REDIRECTS TO: /swagger
+200    59KB  https://aletcloud.com/support
+301   162B   https://aletcloud.com/templates/index.html    -> REDIRECTS TO: /templates
+301   162B   https://aletcloud.com/tiny_mce/plugins/imagemanager/pages/im/index.html    -> REDIRECTS TO: /tiny_mce/plugins/imagemanager/pages/im
+301   162B   https://aletcloud.com/vpn/index.html    -> REDIRECTS TO: /vpn
+301   162B   https://aletcloud.com/webadmin/index.html    -> REDIRECTS TO: /webadmin
+301   162B   https://aletcloud.com/webdav/index.html    -> REDIRECTS TO: /webdav

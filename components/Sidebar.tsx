@@ -58,19 +58,19 @@ export function Sidebar({ onNavigate, className }: SidebarProps) {
     if (!user) {
       return [
         {
-          title: "Marketplace",
+          title: language === "am" ? "የስራ ገበያ" : "Marketplace",
           links: [
-            { href: "/gigs", label: "Services", icon: Sparkles },
-            { href: "/jobs", label: "Projects", icon: Briefcase },
-            { href: "/talent", label: "Specialists", icon: Users },
+            { href: "/gigs", label: language === "am" ? "አገልግሎቶች" : "Services & Gigs", icon: Sparkles },
+            { href: "/jobs", label: language === "am" ? "የፕሮጀክት ጨረታዎች" : "Project RFPs", icon: Briefcase },
+            { href: "/talent", label: language === "am" ? "ባለሙያዎች" : "Find Specialists", icon: Users },
           ],
         },
         {
-          title: "Platform",
+          title: language === "am" ? "ደህንነት እና ዋስትና" : "Platform & Trust",
           links: [
-            { href: "/how-it-works", label: "How It Works", icon: Wallet },
-            { href: "/escrow", label: "Payment Protection", icon: ShieldCheck },
-            { href: "/verify", label: "Verify Trust Deeds", icon: ShieldCheck },
+            { href: "/how-it-works", label: language === "am" ? "እንዴት እንደሚሰራ" : "How It Works", icon: Wallet },
+            { href: "/escrow", label: language === "am" ? "የክፍያ ዋስትና" : "Escrow Protection", icon: ShieldCheck },
+            { href: "/verify", label: language === "am" ? "የሰነድ ማረጋገጫ" : "Verify Trust Deeds", icon: ShieldCheck },
           ],
         },
       ];
@@ -206,8 +206,8 @@ export function Sidebar({ onNavigate, className }: SidebarProps) {
           </div>
         </Link>
 
-        {/* Primary Role Action Button (Authenticated Users) */}
-        {user && (
+        {/* Primary Role Action Button */}
+        {user ? (
           <div>
             {currentRole === "client" && (
               <Link
@@ -216,7 +216,7 @@ export function Sidebar({ onNavigate, className }: SidebarProps) {
                 className="btn-primary !py-2.5 !text-xs w-full flex items-center justify-center gap-2 font-bold shadow-ochre"
               >
                 <Plus className="h-4 w-4 shrink-0" />
-                <span>Post Project RFP</span>
+                <span>{language === "am" ? "የፕሮጀክት ጨረታ ይለጥፉ" : "Post Project RFP"}</span>
               </Link>
             )}
             {currentRole === "freelancer" && (
@@ -226,7 +226,7 @@ export function Sidebar({ onNavigate, className }: SidebarProps) {
                 className="btn-primary !py-2.5 !text-xs w-full flex items-center justify-center gap-2 font-bold shadow-ochre"
               >
                 <Plus className="h-4 w-4 shrink-0" />
-                <span>Offer a Service</span>
+                <span>{language === "am" ? "አገልግሎት ይስጡ" : "Offer a Service"}</span>
               </Link>
             )}
             {currentRole === "admin" && (
@@ -236,9 +236,20 @@ export function Sidebar({ onNavigate, className }: SidebarProps) {
                 className="btn-primary !py-2.5 !text-xs w-full flex items-center justify-center gap-2 font-bold shadow-ochre"
               >
                 <Scale className="h-4 w-4 shrink-0" />
-                <span>Arbitration Panel</span>
+                <span>{language === "am" ? "የሽምግልና ክፍል" : "Arbitration Panel"}</span>
               </Link>
             )}
+          </div>
+        ) : (
+          <div>
+            <Link
+              href="/jobs/new"
+              onClick={onNavigate}
+              className="btn-primary !py-2.5 !text-xs w-full flex items-center justify-center gap-2 font-bold shadow-ochre"
+            >
+              <Plus className="h-4 w-4 shrink-0" />
+              <span>{language === "am" ? "የፕሮጀክት ጨረታ ይለጥፉ" : "+ Post a Project RFP"}</span>
+            </Link>
           </div>
         )}
 
@@ -353,14 +364,14 @@ export function Sidebar({ onNavigate, className }: SidebarProps) {
               onClick={onNavigate}
               className="btn-secondary !py-2.5 !text-xs text-center font-semibold"
             >
-              Sign In
+              {language === "am" ? "ይግቡ" : "Sign In"}
             </Link>
             <Link
               href="/register"
               onClick={onNavigate}
               className="btn-primary !py-2.5 !text-xs text-center font-bold shadow-ochre"
             >
-              Register
+              {language === "am" ? "ይመዝገቡ" : "Register"}
             </Link>
           </div>
         )}

@@ -50,18 +50,18 @@ export async function POST(req: Request) {
       password: body.password,
     });
     if (error) {
-      await recordSecurityEvent({
+      void recordSecurityEvent({
         eventType: "auth.login.failure",
         metadata: { email: body.email, reason: error.message },
-      });
+      }).catch(() => {});
       return NextResponse.json({ error: error.message }, { status: 401 });
     }
 
-    await recordSecurityEvent({
+    void recordSecurityEvent({
       actorId: data.user.id,
       eventType: "auth.login.success",
       metadata: { email: body.email },
-    });
+    }).catch(() => {});
 
     return NextResponse.json({ user: data.user });
   } catch (err: unknown) {

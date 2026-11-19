@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FormEvent, useState } from "react";
-import { useRouter } from "next/navigation";
 import {
   ArrowRight,
   Briefcase,
@@ -13,7 +12,6 @@ import {
   Sparkles,
 } from "lucide-react";
 import { authApi } from "@/lib/api";
-import { useSession } from "@/components/SessionProvider";
 import { isDemoMode } from "@/lib/demo/mode";
 
 const DEMO_ACCOUNTS = [
@@ -43,16 +41,14 @@ export default function LoginPage() {
   const [password, setPassword] = useState(demoMode ? "demo1234" : "");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
-  const { refresh } = useSession();
-  const router = useRouter();
 
   async function loginWithCredentials(userEmail: string, userPass: string) {
     setBusy(true);
     setError("");
     try {
       await authApi.login(userEmail, userPass);
-      await refresh();
-      router.push("/dashboard");
+      // Fast, clean redirect that immediately passes fresh session cookies to the server
+      window.location.href = "/dashboard";
     } catch (err) {
       setError(err instanceof Error ? err.message : "Login failed");
       setBusy(false);
@@ -202,9 +198,16 @@ export default function LoginPage() {
         <button
           type="submit"
           disabled={busy}
-          className="btn-primary w-full !py-3 font-bold text-sm shadow-ochre mt-2"
+          className="btn-primary w-full !py-3 font-bold text-sm shadow-ochre mt-2 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-80 disabled:cursor-wait transition-all"
         >
-          {busy ? "Authenticating…" : "Sign In to Muday-Freelance"}
+          {busy ? (
+            <>
+              <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+              <span>Authenticating…</span>
+            </>
+          ) : (
+            <span>Sign In to MudayHub</span>
+          )}
         </button>
 
         <p className="text-center text-xs text-slate-500 pt-2">
